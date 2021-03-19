@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator typegraphql {
+  provider = "typegraphql-prisma"
+  output   = "../src/generated/typegraphql-prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./health-companion.db"
+}
+
+model User {
+  email String?  @unique
+  id    Int     @id @default(autoincrement())
+  name  String? @unique
+}
+
+model MetActivities {
+  id          Int     @id @default(autoincrement())
+  metId       Int
+  mets        Float
+  type        String
+  name        String
+}
+
+model CompletedExercise {
+  id              Int     @id @default(autoincrement())
+  metActivity     MetActivity?        @relation(fields: [metActivityId], references: [id])
+  metActivityId   Int?
+  completedAt     DateTime    @default(now())
+}

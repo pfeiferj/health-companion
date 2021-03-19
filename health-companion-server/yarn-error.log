@@ -1,0 +1,54 @@
+Arguments: 
+  /home/jacob/.nvm/versions/node/v10.23.1/bin/node /home/jacob/.nvm/versions/node/v10.23.1/bin/yarn add -D eslint prettier
+
+PATH: 
+  /home/jacob/.deno/bin:/home/jacob/.nvm/versions/node/v10.23.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/28644OpticosStudios.GWSL_1.3.71.0_x64__r3mwbcqrwk84r/GWSL:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Oculus/Support/oculus-runtime:/mnt/c/Python38/Scripts/:/mnt/c/Python38/:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/GnuPG/bin:/mnt/c/Go/bin:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files (x86)/Calibre2/:/mnt/c/Program Files/dotnet/:/mnt/c/bin:/mnt/c/Program Files (x86)/QuickTime/QTSystem/:/mnt/c/Program Files/WireGuard/:/mnt/c/Users/jacob/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/jacob/AppData/Roaming/npm:/mnt/c/Users/jacob/go/bin:/mnt/c/bin:/mnt/c/Users/jacob/AppData/Local/Programs/Microsoft VS Code/bin:/home/jacob/.local/share/npm/global/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  10.23.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  TypeError: Cannot read property 'manifest' of undefined
+      at _loop (/home/jacob/.nvm/versions/node/v10.23.1/lib/node_modules/yarn/lib/cli.js:6973:102)
+      at _loop.next (<anonymous>)
+      at Add.<anonymous> (/home/jacob/.nvm/versions/node/v10.23.1/lib/node_modules/yarn/lib/cli.js:7031:27)
+      at Generator.next (<anonymous>)
+      at step (/home/jacob/.nvm/versions/node/v10.23.1/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /home/jacob/.nvm/versions/node/v10.23.1/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "typegraphql-example",
+    "scripts": {
+      "dev": "ts-node-dev --no-notify --respawn --transpile-only src/index.ts"
+    },
+    "dependencies": {
+      "@prisma/client": "2.18.0",
+      "apollo-server": "2.21.1",
+      "class-validator": "0.13.1",
+      "graphql": "15.5.0",
+      "reflect-metadata": "0.1.13",
+      "type-graphql": "1.1.1"
+    },
+    "devDependencies": {
+      "prisma": "2.18.0",
+      "@types/graphql": "14.5.0",
+      "@types/node": "12.20.5",
+      "@types/ws": "7.4.0",
+      "ts-node": "9.1.1",
+      "ts-node-dev": "1.1.6",
+      "typescript": "4.2.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
