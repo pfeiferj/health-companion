@@ -7,15 +7,20 @@ import { DecimalJSScalar } from "../../scalars";
   isAbstract: true
 })
 export class UserMinAggregate {
-  @TypeGraphQL.Field(_type => String, {
-    nullable: true
-  })
-  email!: string | null;
-
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
     nullable: false
   })
   id!: number;
+
+  @TypeGraphQL.Field(_type => String, {
+    nullable: true
+  })
+  username!: string | null;
+
+  @TypeGraphQL.Field(_type => String, {
+    nullable: true
+  })
+  units!: string | null;
 
   @TypeGraphQL.Field(_type => String, {
     nullable: true

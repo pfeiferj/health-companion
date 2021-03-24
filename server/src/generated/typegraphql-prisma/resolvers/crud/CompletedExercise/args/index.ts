@@ -1,0 +1,10 @@
+export { AggregateCompletedExerciseArgs } from "./AggregateCompletedExerciseArgs";
+export { CreateCompletedExerciseArgs } from "./CreateCompletedExerciseArgs";
+export { DeleteCompletedExerciseArgs } from "./DeleteCompletedExerciseArgs";
+export { DeleteManyCompletedExerciseArgs } from "./DeleteManyCompletedExerciseArgs";
+export { FindFirstCompletedExerciseArgs } from "./FindFirstCompletedExerciseArgs";
+export { FindManyCompletedExerciseArgs } from "./FindManyCompletedExerciseArgs";
+export { FindUniqueCompletedExerciseArgs } from "./FindUniqueCompletedExerciseArgs";
+export { UpdateCompletedExerciseArgs } from "./UpdateCompletedExerciseArgs";
+export { UpdateManyCompletedExerciseArgs } from "./UpdateManyCompletedExerciseArgs";
+export { UpsertCompletedExerciseArgs } from "./UpsertCompletedExerciseArgs";

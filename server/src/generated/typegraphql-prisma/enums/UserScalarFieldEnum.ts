@@ -1,8 +1,9 @@
 import * as TypeGraphQL from "type-graphql";
 
 export enum UserScalarFieldEnum {
-  email = "email",
   id = "id",
+  username = "username",
+  units = "units",
   name = "name"
 }
 TypeGraphQL.registerEnumType(UserScalarFieldEnum, {

@@ -1,6 +1,7 @@
 import { ClassType } from "type-graphql";
 import * as crudResolvers from "./resolvers/crud/resolvers-crud.index";
 import * as actionResolvers from "./resolvers/crud/resolvers-actions.index";
+import * as relationResolvers from "./resolvers/relations/resolvers.index";
 import * as models from "./models";
 import * as outputTypes from "./resolvers/outputs";
 import * as inputTypes from "./resolvers/inputs";
@@ -8,7 +9,17 @@ import * as argsTypes from "./resolvers/crud/args.index";
 
 const crudResolversMap = {
   User: crudResolvers.UserCrudResolver,
-  MetActivities: crudResolvers.MetActivitiesCrudResolver
+  MetActivities: crudResolvers.MetActivitiesCrudResolver,
+  CompletedExercise: crudResolvers.CompletedExerciseCrudResolver,
+  Weight: crudResolvers.WeightCrudResolver,
+  ConsumedFood: crudResolvers.ConsumedFoodCrudResolver
+};
+const relationResolversMap = {
+  User: relationResolvers.UserRelationsResolver,
+  MetActivities: relationResolvers.MetActivitiesRelationsResolver,
+  CompletedExercise: relationResolvers.CompletedExerciseRelationsResolver,
+  Weight: relationResolvers.WeightRelationsResolver,
+  ConsumedFood: relationResolvers.ConsumedFoodRelationsResolver
 };
 const actionResolversMap = {
   User: {
@@ -34,7 +45,270 @@ const actionResolversMap = {
     updateManyMetActivities: actionResolvers.UpdateManyMetActivitiesResolver,
     upsertMetActivities: actionResolvers.UpsertMetActivitiesResolver,
     aggregateMetActivities: actionResolvers.AggregateMetActivitiesResolver
+  },
+  CompletedExercise: {
+    completedExercise: actionResolvers.FindUniqueCompletedExerciseResolver,
+    findFirstCompletedExercise: actionResolvers.FindFirstCompletedExerciseResolver,
+    completedExercises: actionResolvers.FindManyCompletedExerciseResolver,
+    createCompletedExercise: actionResolvers.CreateCompletedExerciseResolver,
+    deleteCompletedExercise: actionResolvers.DeleteCompletedExerciseResolver,
+    updateCompletedExercise: actionResolvers.UpdateCompletedExerciseResolver,
+    deleteManyCompletedExercise: actionResolvers.DeleteManyCompletedExerciseResolver,
+    updateManyCompletedExercise: actionResolvers.UpdateManyCompletedExerciseResolver,
+    upsertCompletedExercise: actionResolvers.UpsertCompletedExerciseResolver,
+    aggregateCompletedExercise: actionResolvers.AggregateCompletedExerciseResolver
+  },
+  Weight: {
+    weight: actionResolvers.FindUniqueWeightResolver,
+    findFirstWeight: actionResolvers.FindFirstWeightResolver,
+    weights: actionResolvers.FindManyWeightResolver,
+    createWeight: actionResolvers.CreateWeightResolver,
+    deleteWeight: actionResolvers.DeleteWeightResolver,
+    updateWeight: actionResolvers.UpdateWeightResolver,
+    deleteManyWeight: actionResolvers.DeleteManyWeightResolver,
+    updateManyWeight: actionResolvers.UpdateManyWeightResolver,
+    upsertWeight: actionResolvers.UpsertWeightResolver,
+    aggregateWeight: actionResolvers.AggregateWeightResolver
+  },
+  ConsumedFood: {
+    consumedFood: actionResolvers.FindUniqueConsumedFoodResolver,
+    findFirstConsumedFood: actionResolvers.FindFirstConsumedFoodResolver,
+    consumedFoods: actionResolvers.FindManyConsumedFoodResolver,
+    createConsumedFood: actionResolvers.CreateConsumedFoodResolver,
+    deleteConsumedFood: actionResolvers.DeleteConsumedFoodResolver,
+    updateConsumedFood: actionResolvers.UpdateConsumedFoodResolver,
+    deleteManyConsumedFood: actionResolvers.DeleteManyConsumedFoodResolver,
+    updateManyConsumedFood: actionResolvers.UpdateManyConsumedFoodResolver,
+    upsertConsumedFood: actionResolvers.UpsertConsumedFoodResolver,
+    aggregateConsumedFood: actionResolvers.AggregateConsumedFoodResolver
   }
+};
+const resolversInfo = {
+  User: ["user", "findFirstUser", "users", "createUser", "deleteUser", "updateUser", "deleteManyUser", "updateManyUser", "upsertUser", "aggregateUser"],
+  MetActivities: ["findUniqueMetActivities", "findFirstMetActivities", "findManyMetActivities", "createMetActivities", "deleteMetActivities", "updateMetActivities", "deleteManyMetActivities", "updateManyMetActivities", "upsertMetActivities", "aggregateMetActivities"],
+  CompletedExercise: ["completedExercise", "findFirstCompletedExercise", "completedExercises", "createCompletedExercise", "deleteCompletedExercise", "updateCompletedExercise", "deleteManyCompletedExercise", "updateManyCompletedExercise", "upsertCompletedExercise", "aggregateCompletedExercise"],
+  Weight: ["weight", "findFirstWeight", "weights", "createWeight", "deleteWeight", "updateWeight", "deleteManyWeight", "updateManyWeight", "upsertWeight", "aggregateWeight"],
+  ConsumedFood: ["consumedFood", "findFirstConsumedFood", "consumedFoods", "createConsumedFood", "deleteConsumedFood", "updateConsumedFood", "deleteManyConsumedFood", "updateManyConsumedFood", "upsertConsumedFood", "aggregateConsumedFood"]
+};
+const relationResolversInfo = {
+  User: ["CompletedExercise", "Weight", "ConsumedFood"],
+  MetActivities: ["CompletedExercise"],
+  CompletedExercise: ["User", "MetActivity"],
+  Weight: ["User"],
+  ConsumedFood: ["User"]
+};
+const modelsInfo = {
+  User: ["id", "username", "units", "name"],
+  MetActivities: ["id", "metId", "mets", "type", "name"],
+  CompletedExercise: ["id", "userId", "metActivityId", "notes", "completedAt"],
+  Weight: ["id", "userId", "weight", "loggedAt", "time"],
+  ConsumedFood: ["id", "userId", "name", "notes", "calories", "protien", "fat", "carbs"]
+};
+const inputsInfo = {
+  UserWhereInput: ["AND", "OR", "NOT", "id", "username", "units", "name", "CompletedExercise", "Weight", "ConsumedFood"],
+  UserOrderByInput: ["id", "username", "units", "name"],
+  UserWhereUniqueInput: ["id", "username"],
+  MetActivitiesWhereInput: ["AND", "OR", "NOT", "id", "metId", "mets", "type", "name", "CompletedExercise"],
+  MetActivitiesOrderByInput: ["id", "metId", "mets", "type", "name"],
+  MetActivitiesWhereUniqueInput: ["id"],
+  CompletedExerciseWhereInput: ["AND", "OR", "NOT", "id", "User", "userId", "MetActivity", "metActivityId", "notes", "completedAt"],
+  CompletedExerciseOrderByInput: ["id", "userId", "metActivityId", "notes", "completedAt"],
+  CompletedExerciseWhereUniqueInput: ["id"],
+  WeightWhereInput: ["AND", "OR", "NOT", "id", "User", "userId", "weight", "loggedAt", "time"],
+  WeightOrderByInput: ["id", "userId", "weight", "loggedAt", "time"],
+  WeightWhereUniqueInput: ["id"],
+  ConsumedFoodWhereInput: ["AND", "OR", "NOT", "id", "User", "userId", "name", "notes", "calories", "protien", "fat", "carbs"],
+  ConsumedFoodOrderByInput: ["id", "userId", "name", "notes", "calories", "protien", "fat", "carbs"],
+  ConsumedFoodWhereUniqueInput: ["id"],
+  UserCreateInput: ["username", "units", "name", "CompletedExercise", "Weight", "ConsumedFood"],
+  UserUpdateInput: ["username", "units", "name", "CompletedExercise", "Weight", "ConsumedFood"],
+  UserUpdateManyMutationInput: ["username", "units", "name"],
+  MetActivitiesCreateInput: ["metId", "mets", "type", "name", "CompletedExercise"],
+  MetActivitiesUpdateInput: ["metId", "mets", "type", "name", "CompletedExercise"],
+  MetActivitiesUpdateManyMutationInput: ["metId", "mets", "type", "name"],
+  CompletedExerciseCreateInput: ["notes", "completedAt", "User", "MetActivity"],
+  CompletedExerciseUpdateInput: ["notes", "completedAt", "User", "MetActivity"],
+  CompletedExerciseUpdateManyMutationInput: ["notes", "completedAt"],
+  WeightCreateInput: ["weight", "loggedAt", "time", "User"],
+  WeightUpdateInput: ["weight", "loggedAt", "time", "User"],
+  WeightUpdateManyMutationInput: ["weight", "loggedAt", "time"],
+  ConsumedFoodCreateInput: ["name", "notes", "calories", "protien", "fat", "carbs", "User"],
+  ConsumedFoodUpdateInput: ["name", "notes", "calories", "protien", "fat", "carbs", "User"],
+  ConsumedFoodUpdateManyMutationInput: ["name", "notes", "calories", "protien", "fat", "carbs"],
+  IntFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "not"],
+  StringFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "contains", "startsWith", "endsWith", "not"],
+  StringNullableFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "contains", "startsWith", "endsWith", "not"],
+  CompletedExerciseListRelationFilter: ["every", "some", "none"],
+  WeightListRelationFilter: ["every", "some", "none"],
+  ConsumedFoodListRelationFilter: ["every", "some", "none"],
+  FloatFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "not"],
+  UserRelationFilter: ["is", "isNot"],
+  MetActivitiesRelationFilter: ["is", "isNot"],
+  IntNullableFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "not"],
+  DateTimeFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "not"],
+  CompletedExerciseCreateNestedManyWithoutUserInput: ["create", "connectOrCreate", "connect"],
+  WeightCreateNestedManyWithoutUserInput: ["create", "connectOrCreate", "connect"],
+  ConsumedFoodCreateNestedManyWithoutUserInput: ["create", "connectOrCreate", "connect"],
+  StringFieldUpdateOperationsInput: ["set"],
+  NullableStringFieldUpdateOperationsInput: ["set"],
+  CompletedExerciseUpdateManyWithoutUserInput: ["create", "connectOrCreate", "upsert", "connect", "set", "disconnect", "delete", "update", "updateMany", "deleteMany"],
+  WeightUpdateManyWithoutUserInput: ["create", "connectOrCreate", "upsert", "connect", "set", "disconnect", "delete", "update", "updateMany", "deleteMany"],
+  ConsumedFoodUpdateManyWithoutUserInput: ["create", "connectOrCreate", "upsert", "connect", "set", "disconnect", "delete", "update", "updateMany", "deleteMany"],
+  IntFieldUpdateOperationsInput: ["set", "increment", "decrement", "multiply", "divide"],
+  CompletedExerciseCreateNestedManyWithoutMetActivityInput: ["create", "connectOrCreate", "connect"],
+  FloatFieldUpdateOperationsInput: ["set", "increment", "decrement", "multiply", "divide"],
+  CompletedExerciseUpdateManyWithoutMetActivityInput: ["create", "connectOrCreate", "upsert", "connect", "set", "disconnect", "delete", "update", "updateMany", "deleteMany"],
+  UserCreateNestedOneWithoutCompletedExerciseInput: ["create", "connectOrCreate", "connect"],
+  MetActivitiesCreateNestedOneWithoutCompletedExerciseInput: ["create", "connectOrCreate", "connect"],
+  DateTimeFieldUpdateOperationsInput: ["set"],
+  UserUpdateOneRequiredWithoutCompletedExerciseInput: ["create", "connectOrCreate", "upsert", "connect", "update"],
+  MetActivitiesUpdateOneWithoutCompletedExerciseInput: ["create", "connectOrCreate", "upsert", "connect", "disconnect", "delete", "update"],
+  NullableIntFieldUpdateOperationsInput: ["set", "increment", "decrement", "multiply", "divide"],
+  UserCreateNestedOneWithoutWeightInput: ["create", "connectOrCreate", "connect"],
+  UserUpdateOneRequiredWithoutWeightInput: ["create", "connectOrCreate", "upsert", "connect", "update"],
+  UserCreateNestedOneWithoutConsumedFoodInput: ["create", "connectOrCreate", "connect"],
+  UserUpdateOneRequiredWithoutConsumedFoodInput: ["create", "connectOrCreate", "upsert", "connect", "update"],
+  NestedIntFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "not"],
+  NestedStringFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "contains", "startsWith", "endsWith", "not"],
+  NestedStringNullableFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "contains", "startsWith", "endsWith", "not"],
+  NestedFloatFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "not"],
+  NestedIntNullableFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "not"],
+  NestedDateTimeFilter: ["equals", "in", "notIn", "lt", "lte", "gt", "gte", "not"],
+  CompletedExerciseCreateWithoutUserInput: ["notes", "completedAt", "MetActivity"],
+  CompletedExerciseCreateOrConnectWithoutUserInput: ["where", "create"],
+  WeightCreateWithoutUserInput: ["weight", "loggedAt", "time"],
+  WeightCreateOrConnectWithoutUserInput: ["where", "create"],
+  ConsumedFoodCreateWithoutUserInput: ["name", "notes", "calories", "protien", "fat", "carbs"],
+  ConsumedFoodCreateOrConnectWithoutUserInput: ["where", "create"],
+  CompletedExerciseUpsertWithWhereUniqueWithoutUserInput: ["where", "update", "create"],
+  CompletedExerciseUpdateWithWhereUniqueWithoutUserInput: ["where", "data"],
+  CompletedExerciseUpdateManyWithWhereWithoutUserInput: ["where", "data"],
+  CompletedExerciseScalarWhereInput: ["AND", "OR", "NOT", "id", "userId", "metActivityId", "notes", "completedAt"],
+  WeightUpsertWithWhereUniqueWithoutUserInput: ["where", "update", "create"],
+  WeightUpdateWithWhereUniqueWithoutUserInput: ["where", "data"],
+  WeightUpdateManyWithWhereWithoutUserInput: ["where", "data"],
+  WeightScalarWhereInput: ["AND", "OR", "NOT", "id", "userId", "weight", "loggedAt", "time"],
+  ConsumedFoodUpsertWithWhereUniqueWithoutUserInput: ["where", "update", "create"],
+  ConsumedFoodUpdateWithWhereUniqueWithoutUserInput: ["where", "data"],
+  ConsumedFoodUpdateManyWithWhereWithoutUserInput: ["where", "data"],
+  ConsumedFoodScalarWhereInput: ["AND", "OR", "NOT", "id", "userId", "name", "notes", "calories", "protien", "fat", "carbs"],
+  CompletedExerciseCreateWithoutMetActivityInput: ["notes", "completedAt", "User"],
+  CompletedExerciseCreateOrConnectWithoutMetActivityInput: ["where", "create"],
+  CompletedExerciseUpsertWithWhereUniqueWithoutMetActivityInput: ["where", "update", "create"],
+  CompletedExerciseUpdateWithWhereUniqueWithoutMetActivityInput: ["where", "data"],
+  CompletedExerciseUpdateManyWithWhereWithoutMetActivityInput: ["where", "data"],
+  UserCreateWithoutCompletedExerciseInput: ["username", "units", "name", "Weight", "ConsumedFood"],
+  UserCreateOrConnectWithoutCompletedExerciseInput: ["where", "create"],
+  MetActivitiesCreateWithoutCompletedExerciseInput: ["metId", "mets", "type", "name"],
+  MetActivitiesCreateOrConnectWithoutCompletedExerciseInput: ["where", "create"],
+  UserUpsertWithoutCompletedExerciseInput: ["update", "create"],
+  UserUpdateWithoutCompletedExerciseInput: ["username", "units", "name", "Weight", "ConsumedFood"],
+  MetActivitiesUpsertWithoutCompletedExerciseInput: ["update", "create"],
+  MetActivitiesUpdateWithoutCompletedExerciseInput: ["metId", "mets", "type", "name"],
+  UserCreateWithoutWeightInput: ["username", "units", "name", "CompletedExercise", "ConsumedFood"],
+  UserCreateOrConnectWithoutWeightInput: ["where", "create"],
+  UserUpsertWithoutWeightInput: ["update", "create"],
+  UserUpdateWithoutWeightInput: ["username", "units", "name", "CompletedExercise", "ConsumedFood"],
+  UserCreateWithoutConsumedFoodInput: ["username", "units", "name", "CompletedExercise", "Weight"],
+  UserCreateOrConnectWithoutConsumedFoodInput: ["where", "create"],
+  UserUpsertWithoutConsumedFoodInput: ["update", "create"],
+  UserUpdateWithoutConsumedFoodInput: ["username", "units", "name", "CompletedExercise", "Weight"],
+  CompletedExerciseUpdateWithoutUserInput: ["notes", "completedAt", "MetActivity"],
+  WeightUpdateWithoutUserInput: ["weight", "loggedAt", "time"],
+  ConsumedFoodUpdateWithoutUserInput: ["name", "notes", "calories", "protien", "fat", "carbs"],
+  CompletedExerciseUpdateWithoutMetActivityInput: ["notes", "completedAt", "User"]
+};
+const outputsInfo = {
+  Query: ["findFirstUser", "findManyUser", "aggregateUser", "findUniqueUser", "findFirstMetActivities", "findManyMetActivities", "aggregateMetActivities", "findUniqueMetActivities", "findFirstCompletedExercise", "findManyCompletedExercise", "aggregateCompletedExercise", "findUniqueCompletedExercise", "findFirstWeight", "findManyWeight", "aggregateWeight", "findUniqueWeight", "findFirstConsumedFood", "findManyConsumedFood", "aggregateConsumedFood", "findUniqueConsumedFood"],
+  Mutation: ["createOneUser", "upsertOneUser", "deleteOneUser", "updateOneUser", "updateManyUser", "deleteManyUser", "createOneMetActivities", "upsertOneMetActivities", "deleteOneMetActivities", "updateOneMetActivities", "updateManyMetActivities", "deleteManyMetActivities", "createOneCompletedExercise", "upsertOneCompletedExercise", "deleteOneCompletedExercise", "updateOneCompletedExercise", "updateManyCompletedExercise", "deleteManyCompletedExercise", "createOneWeight", "upsertOneWeight", "deleteOneWeight", "updateOneWeight", "updateManyWeight", "deleteManyWeight", "createOneConsumedFood", "upsertOneConsumedFood", "deleteOneConsumedFood", "updateOneConsumedFood", "updateManyConsumedFood", "deleteManyConsumedFood", "executeRaw", "queryRaw"],
+  AggregateUser: ["count", "avg", "sum", "min", "max"],
+  AggregateMetActivities: ["count", "avg", "sum", "min", "max"],
+  AggregateCompletedExercise: ["count", "avg", "sum", "min", "max"],
+  AggregateWeight: ["count", "avg", "sum", "min", "max"],
+  AggregateConsumedFood: ["count", "avg", "sum", "min", "max"],
+  AffectedRowsOutput: ["count"],
+  UserCountAggregate: ["id", "username", "units", "name", "_all"],
+  UserAvgAggregate: ["id"],
+  UserSumAggregate: ["id"],
+  UserMinAggregate: ["id", "username", "units", "name"],
+  UserMaxAggregate: ["id", "username", "units", "name"],
+  MetActivitiesCountAggregate: ["id", "metId", "mets", "type", "name", "_all"],
+  MetActivitiesAvgAggregate: ["id", "metId", "mets"],
+  MetActivitiesSumAggregate: ["id", "metId", "mets"],
+  MetActivitiesMinAggregate: ["id", "metId", "mets", "type", "name"],
+  MetActivitiesMaxAggregate: ["id", "metId", "mets", "type", "name"],
+  CompletedExerciseCountAggregate: ["id", "userId", "metActivityId", "notes", "completedAt", "_all"],
+  CompletedExerciseAvgAggregate: ["id", "userId", "metActivityId"],
+  CompletedExerciseSumAggregate: ["id", "userId", "metActivityId"],
+  CompletedExerciseMinAggregate: ["id", "userId", "metActivityId", "notes", "completedAt"],
+  CompletedExerciseMaxAggregate: ["id", "userId", "metActivityId", "notes", "completedAt"],
+  WeightCountAggregate: ["id", "userId", "weight", "loggedAt", "time", "_all"],
+  WeightAvgAggregate: ["id", "userId", "weight"],
+  WeightSumAggregate: ["id", "userId", "weight"],
+  WeightMinAggregate: ["id", "userId", "weight", "loggedAt", "time"],
+  WeightMaxAggregate: ["id", "userId", "weight", "loggedAt", "time"],
+  ConsumedFoodCountAggregate: ["id", "userId", "name", "notes", "calories", "protien", "fat", "carbs", "_all"],
+  ConsumedFoodAvgAggregate: ["id", "userId", "calories", "protien", "fat", "carbs"],
+  ConsumedFoodSumAggregate: ["id", "userId", "calories", "protien", "fat", "carbs"],
+  ConsumedFoodMinAggregate: ["id", "userId", "name", "notes", "calories", "protien", "fat", "carbs"],
+  ConsumedFoodMaxAggregate: ["id", "userId", "name", "notes", "calories", "protien", "fat", "carbs"],
+  User: ["id", "username", "units", "name", "CompletedExercise", "Weight", "ConsumedFood"],
+  MetActivities: ["id", "metId", "mets", "type", "name", "CompletedExercise"],
+  CompletedExercise: ["id", "User", "userId", "MetActivity", "metActivityId", "notes", "completedAt"],
+  Weight: ["id", "User", "userId", "weight", "loggedAt", "time"],
+  ConsumedFood: ["id", "User", "userId", "name", "notes", "calories", "protien", "fat", "carbs"]
+};
+const argsInfo = {
+  FindUniqueUserArgs: ["where"],
+  FindFirstUserArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
+  FindManyUserArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
+  CreateUserArgs: ["data"],
+  DeleteUserArgs: ["where"],
+  UpdateUserArgs: ["data", "where"],
+  DeleteManyUserArgs: ["where"],
+  UpdateManyUserArgs: ["data", "where"],
+  UpsertUserArgs: ["where", "create", "update"],
+  AggregateUserArgs: ["where", "orderBy", "cursor", "take", "skip"],
+  FindUniqueMetActivitiesArgs: ["where"],
+  FindFirstMetActivitiesArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
+  FindManyMetActivitiesArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
+  CreateMetActivitiesArgs: ["data"],
+  DeleteMetActivitiesArgs: ["where"],
+  UpdateMetActivitiesArgs: ["data", "where"],
+  DeleteManyMetActivitiesArgs: ["where"],
+  UpdateManyMetActivitiesArgs: ["data", "where"],
+  UpsertMetActivitiesArgs: ["where", "create", "update"],
+  AggregateMetActivitiesArgs: ["where", "orderBy", "cursor", "take", "skip"],
+  FindUniqueCompletedExerciseArgs: ["where"],
+  FindFirstCompletedExerciseArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
+  FindManyCompletedExerciseArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
+  CreateCompletedExerciseArgs: ["data"],
+  DeleteCompletedExerciseArgs: ["where"],
+  UpdateCompletedExerciseArgs: ["data", "where"],
+  DeleteManyCompletedExerciseArgs: ["where"],
+  UpdateManyCompletedExerciseArgs: ["data", "where"],
+  UpsertCompletedExerciseArgs: ["where", "create", "update"],
+  AggregateCompletedExerciseArgs: ["where", "orderBy", "cursor", "take", "skip"],
+  FindUniqueWeightArgs: ["where"],
+  FindFirstWeightArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
+  FindManyWeightArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
+  CreateWeightArgs: ["data"],
+  DeleteWeightArgs: ["where"],
+  UpdateWeightArgs: ["data", "where"],
+  DeleteManyWeightArgs: ["where"],
+  UpdateManyWeightArgs: ["data", "where"],
+  UpsertWeightArgs: ["where", "create", "update"],
+  AggregateWeightArgs: ["where", "orderBy", "cursor", "take", "skip"],
+  FindUniqueConsumedFoodArgs: ["where"],
+  FindFirstConsumedFoodArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
+  FindManyConsumedFoodArgs: ["where", "orderBy", "cursor", "take", "skip", "distinct"],
+  CreateConsumedFoodArgs: ["data"],
+  DeleteConsumedFoodArgs: ["where"],
+  UpdateConsumedFoodArgs: ["data", "where"],
+  DeleteManyConsumedFoodArgs: ["where"],
+  UpdateManyConsumedFoodArgs: ["data", "where"],
+  UpsertConsumedFoodArgs: ["where", "create", "update"],
+  AggregateConsumedFoodArgs: ["where", "orderBy", "cursor", "take", "skip"]
 };
 
 type ResolverModelNames = keyof typeof crudResolversMap;
@@ -43,9 +317,9 @@ type ModelResolverActionNames<
   TModel extends ResolverModelNames
   > = keyof typeof crudResolversMap[TModel]["prototype"];
 
-export type ResolverActionsConfig<TModel extends ResolverModelNames> = {
-  [TActionName in ModelResolverActionNames<TModel>]?: MethodDecorator[];
-};
+export type ResolverActionsConfig<
+  TModel extends ResolverModelNames
+  > = Partial<Record<ModelResolverActionNames<TModel> | "_all", MethodDecorator[]>>;
 
 export type ResolversEnhanceMap = {
   [TModel in ResolverModelNames]?: ResolverActionsConfig<TModel>;
@@ -56,26 +330,101 @@ export function applyResolversEnhanceMap(
 ) {
   for (const resolversEnhanceMapKey of Object.keys(resolversEnhanceMap)) {
     const modelName = resolversEnhanceMapKey as keyof typeof resolversEnhanceMap;
+    const crudTarget = crudResolversMap[modelName].prototype;
     const resolverActionsConfig = resolversEnhanceMap[modelName]!;
-    for (const modelResolverActionName of Object.keys(resolverActionsConfig)) {
+    const actionResolversConfig = actionResolversMap[modelName];
+    if (resolverActionsConfig._all) {
+      const allActionsDecorators = resolverActionsConfig._all;
+      const resolverActionNames = resolversInfo[modelName as keyof typeof resolversInfo];
+      for (const resolverActionName of resolverActionNames) {
+        const actionTarget = (actionResolversConfig[
+          resolverActionName as keyof typeof actionResolversConfig
+        ] as Function).prototype;
+        for (const allActionsDecorator of allActionsDecorators) {
+          allActionsDecorator(
+            crudTarget,
+            resolverActionName,
+            Object.getOwnPropertyDescriptor(crudTarget, resolverActionName)!,
+          );
+          allActionsDecorator(
+            actionTarget,
+            resolverActionName,
+            Object.getOwnPropertyDescriptor(actionTarget, resolverActionName)!,
+          );
+        }
+      }
+    }
+    const resolverActionsToApply = Object.keys(resolverActionsConfig).filter(
+      it => it !== "_all"
+    );
+    for (const resolverActionName of resolverActionsToApply) {
       const decorators = resolverActionsConfig[
-        modelResolverActionName as keyof typeof resolverActionsConfig
+        resolverActionName as keyof typeof resolverActionsConfig
       ] as MethodDecorator[];
-      const crudTarget = crudResolversMap[modelName].prototype;
-      const actionResolversConfig = actionResolversMap[modelName];
       const actionTarget = (actionResolversConfig[
-        modelResolverActionName as keyof typeof actionResolversConfig
+        resolverActionName as keyof typeof actionResolversConfig
       ] as Function).prototype;
       for (const decorator of decorators) {
         decorator(
           crudTarget,
-          modelResolverActionName,
-          Object.getOwnPropertyDescriptor(crudTarget, modelResolverActionName)!,
+          resolverActionName,
+          Object.getOwnPropertyDescriptor(crudTarget, resolverActionName)!,
         );
         decorator(
           actionTarget,
-          modelResolverActionName,
-          Object.getOwnPropertyDescriptor(actionTarget, modelResolverActionName)!,
+          resolverActionName,
+          Object.getOwnPropertyDescriptor(actionTarget, resolverActionName)!,
+        );
+      }
+    }
+  }
+}
+
+type RelationResolverModelNames = keyof typeof relationResolversMap;
+
+type RelationResolverActionNames<
+  TModel extends RelationResolverModelNames
+  > = keyof typeof relationResolversMap[TModel]["prototype"];
+
+export type RelationResolverActionsConfig<TModel extends RelationResolverModelNames>
+  = Partial<Record<RelationResolverActionNames<TModel> | "_all", MethodDecorator[]>>;
+
+export type RelationResolversEnhanceMap = {
+  [TModel in RelationResolverModelNames]?: RelationResolverActionsConfig<TModel>;
+};
+
+export function applyRelationResolversEnhanceMap(
+  relationResolversEnhanceMap: RelationResolversEnhanceMap,
+) {
+  for (const relationResolversEnhanceMapKey of Object.keys(relationResolversEnhanceMap)) {
+    const modelName = relationResolversEnhanceMapKey as keyof typeof relationResolversEnhanceMap;
+    const relationResolverTarget = relationResolversMap[modelName].prototype;
+    const relationResolverActionsConfig = relationResolversEnhanceMap[modelName]!;
+    if (relationResolverActionsConfig._all) {
+      const allActionsDecorators = relationResolverActionsConfig._all;
+      const relationResolverActionNames = relationResolversInfo[modelName as keyof typeof relationResolversInfo];
+      for (const relationResolverActionName of relationResolverActionNames) {
+        for (const allActionsDecorator of allActionsDecorators) {
+          allActionsDecorator(
+            relationResolverTarget,
+            relationResolverActionName,
+            Object.getOwnPropertyDescriptor(relationResolverTarget, relationResolverActionName)!,
+          );
+        }
+      }
+    }
+    const relationResolverActionsToApply = Object.keys(relationResolverActionsConfig).filter(
+      it => it !== "_all"
+    );
+    for (const relationResolverActionName of relationResolverActionsToApply) {
+      const decorators = relationResolverActionsConfig[
+        relationResolverActionName as keyof typeof relationResolverActionsConfig
+      ] as MethodDecorator[];
+      for (const decorator of decorators) {
+        decorator(
+          relationResolverTarget,
+          relationResolverActionName,
+          Object.getOwnPropertyDescriptor(relationResolverTarget, relationResolverActionName)!,
         );
       }
     }
@@ -88,7 +437,7 @@ type TypeConfig = {
 };
 
 type FieldsConfig<TTypeKeys extends string = string> = Partial<
-  Record<TTypeKeys, PropertyDecorator[]>
+  Record<TTypeKeys | "_all", PropertyDecorator[]>
 >;
 
 function applyTypeClassEnhanceConfig<
@@ -98,6 +447,7 @@ function applyTypeClassEnhanceConfig<
   enhanceConfig: TEnhanceConfig,
   typeClass: ClassType<TType>,
   typePrototype: TType,
+  typeFieldNames: string[]
 ) {
   if (enhanceConfig.class) {
     for (const decorator of enhanceConfig.class) {
@@ -105,13 +455,21 @@ function applyTypeClassEnhanceConfig<
     }
   }
   if (enhanceConfig.fields) {
-    for (const modelFieldName of Object.keys(enhanceConfig.fields)) {
-      const decorators = enhanceConfig.fields[
-        modelFieldName as keyof typeof enhanceConfig.fields
-      ]!;
-
-      for (const decorator of decorators) {
-        decorator(typePrototype, modelFieldName);
+    if (enhanceConfig.fields._all) {
+      const allFieldsDecorators = enhanceConfig.fields._all;
+      for (const typeFieldName of typeFieldNames) {
+        for (const allFieldsDecorator of allFieldsDecorators) {
+          allFieldsDecorator(typePrototype, typeFieldName);
+        }
+      }
+    }
+    const configFieldsToApply = Object.keys(enhanceConfig.fields).filter(
+      it => it !== "_all"
+    );
+    for (const typeFieldName of configFieldsToApply) {
+      const fieldDecorators = enhanceConfig.fields[typeFieldName]!;
+      for (const fieldDecorator of fieldDecorators) {
+        fieldDecorator(typePrototype, typeFieldName);
       }
     }
   }
@@ -143,7 +501,12 @@ export function applyModelsEnhanceMap(modelsEnhanceMap: ModelsEnhanceMap) {
     const modelConfig = modelsEnhanceMap[modelName]!;
     const modelClass = models[modelName];
     const modelTarget = modelClass.prototype;
-    applyTypeClassEnhanceConfig(modelConfig, modelClass, modelTarget);
+    applyTypeClassEnhanceConfig(
+      modelConfig,
+      modelClass,
+      modelTarget,
+      modelsInfo[modelName as keyof typeof modelsInfo],
+    );
   }
 }
 
@@ -175,7 +538,12 @@ export function applyOutputTypesEnhanceMap(
     const typeConfig = outputTypesEnhanceMap[outputTypeName]!;
     const typeClass = outputTypes[outputTypeName];
     const typeTarget = typeClass.prototype;
-    applyTypeClassEnhanceConfig(typeConfig, typeClass, typeTarget);
+    applyTypeClassEnhanceConfig(
+      typeConfig,
+      typeClass,
+      typeTarget,
+      outputsInfo[outputTypeName as keyof typeof outputsInfo],
+    );
   }
 }
 
@@ -207,7 +575,12 @@ export function applyInputTypesEnhanceMap(
     const typeConfig = inputTypesEnhanceMap[inputTypeName]!;
     const typeClass = inputTypes[inputTypeName];
     const typeTarget = typeClass.prototype;
-    applyTypeClassEnhanceConfig(typeConfig, typeClass, typeTarget);
+    applyTypeClassEnhanceConfig(
+      typeConfig,
+      typeClass,
+      typeTarget,
+      inputsInfo[inputTypeName as keyof typeof inputsInfo],
+    );
   }
 }
 
@@ -239,9 +612,15 @@ export function applyArgsTypesEnhanceMap(
     const typeConfig = argsTypesEnhanceMap[argsTypeName]!;
     const typeClass = argsTypes[argsTypeName];
     const typeTarget = typeClass.prototype;
-    applyTypeClassEnhanceConfig(typeConfig, typeClass, typeTarget);
+    applyTypeClassEnhanceConfig(
+      typeConfig,
+      typeClass,
+      typeTarget,
+      argsInfo[argsTypeName as keyof typeof argsInfo],
+    );
   }
 }
+
 
 
 

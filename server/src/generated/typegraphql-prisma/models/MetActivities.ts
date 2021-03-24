@@ -2,9 +2,12 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../scalars";
+import { CompletedExercise } from "../models/CompletedExercise";
 
+/** Activities with a MET rating. MET (Metabolic Equivalent): The ratio of the work metabolic rate to the resting metabolic rate. One MET is defined as 1 kcal/kg/hour and is roughly equivalent to the energy cost of sitting quietly. A MET also is defined as oxygen uptake in ml/kg/min with one MET equal to the oxygen cost of sitting quietly, equivalent to 3.5 ml/kg/min. For more information about METs visit https://sites.google.com/site/compendiumofphysicalactivities/ */
 @TypeGraphQL.ObjectType({
-  isAbstract: true
+  isAbstract: true,
+  description: "Activities with a MET rating. MET (Metabolic Equivalent): The ratio of the work metabolic rate to the resting metabolic rate. One MET is defined as 1 kcal/kg/hour and is roughly equivalent to the energy cost of sitting quietly. A MET also is defined as oxygen uptake in ml/kg/min with one MET equal to the oxygen cost of sitting quietly, equivalent to 3.5 ml/kg/min. For more information about METs visit https://sites.google.com/site/compendiumofphysicalactivities/"
 })
 export class MetActivities {
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
@@ -31,4 +34,6 @@ export class MetActivities {
     nullable: false
   })
   name!: string;
+
+  CompletedExercise?: CompletedExercise[];
 }

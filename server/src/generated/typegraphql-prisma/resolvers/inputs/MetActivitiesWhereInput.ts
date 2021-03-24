@@ -2,6 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
+import { CompletedExerciseListRelationFilter } from "../inputs/CompletedExerciseListRelationFilter";
 import { FloatFilter } from "../inputs/FloatFilter";
 import { IntFilter } from "../inputs/IntFilter";
 import { StringFilter } from "../inputs/StringFilter";
@@ -49,4 +50,9 @@ export class MetActivitiesWhereInput {
     nullable: true
   })
   name?: StringFilter | undefined;
+
+  @TypeGraphQL.Field(_type => CompletedExerciseListRelationFilter, {
+    nullable: true
+  })
+  CompletedExercise?: CompletedExerciseListRelationFilter | undefined;
 }

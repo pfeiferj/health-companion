@@ -7,13 +7,13 @@ import { DecimalJSScalar } from "../../scalars";
   isAbstract: true
 })
 export class UserWhereUniqueInput {
-  @TypeGraphQL.Field(_type => String, {
-    nullable: true
-  })
-  email?: string | undefined;
-
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
     nullable: true
   })
   id?: number | undefined;
+
+  @TypeGraphQL.Field(_type => String, {
+    nullable: true
+  })
+  username?: string | undefined;
 }

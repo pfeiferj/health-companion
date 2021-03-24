@@ -12,23 +12,57 @@ datasource db {
   url      = "file:./health-companion.db"
 }
 
+/// A user of the application, currently does not support any type of authentication
 model User {
-  email String?  @unique
-  id    Int     @id @default(autoincrement())
-  name  String? @unique
+  id                Int                 @id @default(autoincrement())
+  username          String              @unique
+  units             String
+  name              String?
+  CompletedExercise CompletedExercise[]
+  Weight            Weight[]
+  ConsumedFood      ConsumedFood[]
 }
 
+/// Activities with a MET rating. MET (Metabolic Equivalent): The ratio of the work metabolic rate to the resting metabolic rate. One MET is defined as 1 kcal/kg/hour and is roughly equivalent to the energy cost of sitting quietly. A MET also is defined as oxygen uptake in ml/kg/min with one MET equal to the oxygen cost of sitting quietly, equivalent to 3.5 ml/kg/min. For more information about METs visit https://sites.google.com/site/compendiumofphysicalactivities/
 model MetActivities {
-  id          Int     @id @default(autoincrement())
-  metId       Int
-  mets        Float
-  type        String
-  name        String
+  id                Int                 @id @default(autoincrement())
+  metId             Int
+  mets              Float
+  type              String
+  name              String
+  CompletedExercise CompletedExercise[]
 }
 
+/// An exercise completed by a user. Can be associated to a metActivity to estimate calories burnt.
 model CompletedExercise {
-  id              Int     @id @default(autoincrement())
-  metActivity     MetActivity?        @relation(fields: [metActivityId], references: [id])
-  metActivityId   Int?
-  completedAt     DateTime    @default(now())
+  id            Int            @id @default(autoincrement())
+  User          User           @relation(fields: [userId], references: [id])
+  userId        Int
+  MetActivity   MetActivities? @relation(fields: [metActivityId], references: [id])
+  metActivityId Int?
+  notes         String?
+  completedAt   DateTime       @default(now())
+}
+
+/// The weight of a user at a specific time.
+model Weight {
+  id       Int      @id @default(autoincrement())
+  User     User     @relation(fields: [userId], references: [id])
+  userId   Int
+  weight   Int
+  loggedAt DateTime @default(now())
+  time     DateTime @default(now())
+}
+
+/// Food consumed by a user.
+model ConsumedFood {
+  id       Int     @id @default(autoincrement())
+  User     User    @relation(fields: [userId], references: [id])
+  userId   Int
+  name     String?
+  notes    String?
+  calories Int?
+  protien  Int?
+  fat      Int?
+  carbs    Int?
 }

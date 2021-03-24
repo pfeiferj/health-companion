@@ -1,0 +1,10 @@
+export { AggregateConsumedFoodArgs } from "./AggregateConsumedFoodArgs";
+export { CreateConsumedFoodArgs } from "./CreateConsumedFoodArgs";
+export { DeleteConsumedFoodArgs } from "./DeleteConsumedFoodArgs";
+export { DeleteManyConsumedFoodArgs } from "./DeleteManyConsumedFoodArgs";
+export { FindFirstConsumedFoodArgs } from "./FindFirstConsumedFoodArgs";
+export { FindManyConsumedFoodArgs } from "./FindManyConsumedFoodArgs";
+export { FindUniqueConsumedFoodArgs } from "./FindUniqueConsumedFoodArgs";
+export { UpdateConsumedFoodArgs } from "./UpdateConsumedFoodArgs";
+export { UpdateManyConsumedFoodArgs } from "./UpdateManyConsumedFoodArgs";
+export { UpsertConsumedFoodArgs } from "./UpsertConsumedFoodArgs";

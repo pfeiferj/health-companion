@@ -2,6 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
+import { CompletedExerciseUpdateManyWithoutMetActivityInput } from "../inputs/CompletedExerciseUpdateManyWithoutMetActivityInput";
 import { FloatFieldUpdateOperationsInput } from "../inputs/FloatFieldUpdateOperationsInput";
 import { IntFieldUpdateOperationsInput } from "../inputs/IntFieldUpdateOperationsInput";
 import { StringFieldUpdateOperationsInput } from "../inputs/StringFieldUpdateOperationsInput";
@@ -29,4 +30,9 @@ export class MetActivitiesUpdateInput {
     nullable: true
   })
   name?: StringFieldUpdateOperationsInput | undefined;
+
+  @TypeGraphQL.Field(_type => CompletedExerciseUpdateManyWithoutMetActivityInput, {
+    nullable: true
+  })
+  CompletedExercise?: CompletedExerciseUpdateManyWithoutMetActivityInput | undefined;
 }

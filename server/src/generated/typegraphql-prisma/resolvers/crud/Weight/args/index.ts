@@ -1,0 +1,10 @@
+export { AggregateWeightArgs } from "./AggregateWeightArgs";
+export { CreateWeightArgs } from "./CreateWeightArgs";
+export { DeleteManyWeightArgs } from "./DeleteManyWeightArgs";
+export { DeleteWeightArgs } from "./DeleteWeightArgs";
+export { FindFirstWeightArgs } from "./FindFirstWeightArgs";
+export { FindManyWeightArgs } from "./FindManyWeightArgs";
+export { FindUniqueWeightArgs } from "./FindUniqueWeightArgs";
+export { UpdateManyWeightArgs } from "./UpdateManyWeightArgs";
+export { UpdateWeightArgs } from "./UpdateWeightArgs";
+export { UpsertWeightArgs } from "./UpsertWeightArgs";
