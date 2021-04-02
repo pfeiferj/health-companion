@@ -18,6 +18,11 @@ export class UserCreateInput {
   @TypeGraphQL.Field(_type => String, {
     nullable: false
   })
+  password!: string;
+
+  @TypeGraphQL.Field(_type => String, {
+    nullable: false
+  })
   units!: string;
 
   @TypeGraphQL.Field(_type => String, {

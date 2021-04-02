@@ -6,10 +6,10 @@ import { CompletedExercise } from "../models/CompletedExercise";
 import { ConsumedFood } from "../models/ConsumedFood";
 import { Weight } from "../models/Weight";
 
-/** A user of the application, currently does not support any type of authentication */
+/** A user of the application */
 @TypeGraphQL.ObjectType({
   isAbstract: true,
-  description: "A user of the application, currently does not support any type of authentication"
+  description: "A user of the application"
 })
 export class User {
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
@@ -21,6 +21,11 @@ export class User {
     nullable: false
   })
   username!: string;
+
+  @TypeGraphQL.Field(_type => String, {
+    nullable: false
+  })
+  password!: string;
 
   @TypeGraphQL.Field(_type => String, {
     nullable: false

@@ -21,6 +21,11 @@ export class UserOrderByInput {
   @TypeGraphQL.Field(_type => SortOrder, {
     nullable: true
   })
+  password?: "asc" | "desc" | undefined;
+
+  @TypeGraphQL.Field(_type => SortOrder, {
+    nullable: true
+  })
   units?: "asc" | "desc" | undefined;
 
   @TypeGraphQL.Field(_type => SortOrder, {

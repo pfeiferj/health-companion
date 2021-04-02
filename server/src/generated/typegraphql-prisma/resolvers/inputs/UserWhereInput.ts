@@ -41,6 +41,11 @@ export class UserWhereInput {
   @TypeGraphQL.Field(_type => StringFilter, {
     nullable: true
   })
+  password?: StringFilter | undefined;
+
+  @TypeGraphQL.Field(_type => StringFilter, {
+    nullable: true
+  })
   units?: StringFilter | undefined;
 
   @TypeGraphQL.Field(_type => StringNullableFilter, {

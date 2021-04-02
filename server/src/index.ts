@@ -8,6 +8,24 @@ import session from 'express-session';
 import { v4 as uuidv4 } from 'uuid';
 import passport from 'passport';
 import type { User } from '@prisma/client';
+import bcrypt from 'bcrypt';
+import { ResolversEnhanceMap, applyResolversEnhanceMap } from './generated/typegraphql-prisma';
+import { UseMiddleware } from 'type-graphql';
+
+const resolversEnhanceMap: ResolversEnhanceMap = {
+  User: {
+    createUser: [
+      UseMiddleware(async (data, next) => {
+        if (data.args.data.password) {
+          data.args.data.password = await bcrypt.hash(data.args.data.password, 10);
+        }
+        return next();
+      }),
+    ],
+  },
+};
+
+applyResolversEnhanceMap(resolversEnhanceMap);
 
 import { Strategy as LocalStrategy } from 'passport-local';
 
@@ -51,11 +69,14 @@ const main = async () => {
 
   passport.use(
     new LocalStrategy(async function (username, password, done) {
-      console.log(username, password);
-      const user = await context.prisma.user.findUnique({ where: { username } });
-      console.log(user);
+      const user = await context.prisma.user.findFirst({
+        where: { username },
+      });
 
-      return done(null, user);
+      if (user && (await bcrypt.compare(password, user.password))) {
+        return done(null, user);
+      }
+      return done('Invalid username or password');
     }),
   );
 
