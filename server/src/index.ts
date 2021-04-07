@@ -80,14 +80,14 @@ const main = async () => {
     }),
   );
 
-  app.post(
-    '/login',
-    passport.authenticate('local', {
-      successRedirect: '/',
-      failureRedirect: '/blah',
+  app.post('/login', (req, res) => {
+    const base = req.headers.referer || '/';
+    return passport.authenticate('local', {
+      successRedirect: base,
+      failureRedirect: base + 'login',
       failureFlash: false,
-    }),
-  );
+    })(req, res);
+  });
 
   const server = new ApolloServer({ schema, context });
   server.applyMiddleware({ app });

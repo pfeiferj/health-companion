@@ -1,4 +1,5 @@
 import AppBar from './AppBar';
+import Login from '../Pages/Login';
 import {
   Switch,
   Route,
@@ -9,6 +10,9 @@ export default function Layout() {
     <>
       <AppBar />
       <Switch>
+        <Route path="/login">
+          <Login />
+        </Route>
         <Route path="/about">
           About
         </Route>
