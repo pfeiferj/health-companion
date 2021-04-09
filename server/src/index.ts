@@ -6,17 +6,28 @@ import { resolvers } from './generated/typegraphql-prisma';
 import express from 'express';
 import session from 'express-session';
 import { v4 as uuidv4 } from 'uuid';
-import registerAuth from './auth';
+import { registerAuth, authChecker } from './auth';
 import config from './config';
+import cookieParser from 'cookie-parser';
+
+import './enhancers/User';
 
 const app = express();
+
+app.use(cookieParser());
 
 app.use(
   session({
     genid: () => uuidv4(),
+    cookie: {
+      sameSite: 'none',
+      httpOnly: true,
+      secure: false,
+      maxAge: 60000,
+    },
     secret: config.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
+    resave: true,
+    saveUninitialized: true,
   }),
 );
 
@@ -29,6 +40,8 @@ app.use(
 const main = async () => {
   const schema = await tq.buildSchema({
     resolvers,
+    authChecker,
+    validate: false,
   });
 
   const context = createContext();

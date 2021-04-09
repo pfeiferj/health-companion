@@ -1,42 +1,26 @@
 import passport from 'passport';
-import type { Context } from './context';
+import type { Context, ContextReturn } from './context';
 import type { Express } from 'express';
 import type { User } from '@prisma/client';
 import bcrypt from 'bcrypt';
 import { Strategy as LocalStrategy } from 'passport-local';
-import { UseMiddleware } from 'type-graphql';
-import { ResolversEnhanceMap, applyResolversEnhanceMap } from './generated/typegraphql-prisma';
-
-const resolversEnhanceMap: ResolversEnhanceMap = {
-  User: {
-    createUser: [
-      UseMiddleware(async (data, next) => {
-        if (data.args.data.password) {
-          data.args.data.password = await bcrypt.hash(data.args.data.password, 10);
-        }
-        return next();
-      }),
-    ],
-  },
-};
-
-applyResolversEnhanceMap(resolversEnhanceMap);
+import type { AuthChecker } from 'type-graphql';
 
 passport.serializeUser((user: unknown, done) => {
-  done(null, (user as User).id);
+  done(null, user as User);
 });
 
-passport.deserializeUser((id, done) => {
-  done(null, { id });
+passport.deserializeUser((user, done) => {
+  done(null, user as User);
 });
 
-export default function register(app: Express, context: Context): void {
+export function registerAuth(app: Express, context: Context): void {
   app.use(passport.initialize());
   app.use(passport.session());
 
   passport.use(
     new LocalStrategy(async function (username, password, done) {
-      const user = await context.prisma.user.findFirst({
+      const user = await context({ req: {} }).prisma.user.findFirst({
         where: { username },
       });
 
@@ -56,3 +40,16 @@ export default function register(app: Express, context: Context): void {
     })(req, res);
   });
 }
+
+export const authChecker: AuthChecker<ContextReturn> = ({ root, args, context, info }, roles) => {
+  if (!context.req.user) {
+    return false;
+  }
+  if (roles && Array.isArray(roles) && roles.length) {
+    if (!roles.includes(context.req.user.role)) {
+      return false;
+    }
+  }
+
+  return true;
+};

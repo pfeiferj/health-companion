@@ -16,6 +16,7 @@ datasource db {
 model User {
   id                Int                 @id @default(autoincrement())
   username          String              @unique
+  /// @TypeGraphQL.omit(output: true)
   password          String
   units             String
   name              String?
