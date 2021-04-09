@@ -1,6 +1,6 @@
 export { CompletedExerciseScalarFieldEnum } from "./CompletedExerciseScalarFieldEnum";
 export { ConsumedFoodScalarFieldEnum } from "./ConsumedFoodScalarFieldEnum";
-export { MetActivitiesScalarFieldEnum } from "./MetActivitiesScalarFieldEnum";
+export { MetActivityScalarFieldEnum } from "./MetActivityScalarFieldEnum";
 export { SortOrder } from "./SortOrder";
 export { UserScalarFieldEnum } from "./UserScalarFieldEnum";
 export { WeightScalarFieldEnum } from "./WeightScalarFieldEnum";

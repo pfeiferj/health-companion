@@ -1,2 +1,2 @@
-export * from "./MetActivities/args";
+export * from "./MetActivity/args";
 export * from "./User/args";

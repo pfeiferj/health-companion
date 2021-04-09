@@ -10,7 +10,7 @@ import { registerAuth, authChecker, AuthResolver } from './auth';
 import config from './config';
 import cookieParser from 'cookie-parser';
 
-import './enhancers/User';
+import './enhancers/register';
 
 const app = express();
 

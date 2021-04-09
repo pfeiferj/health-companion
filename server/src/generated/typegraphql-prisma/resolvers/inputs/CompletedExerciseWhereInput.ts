@@ -5,7 +5,7 @@ import { DecimalJSScalar } from "../../scalars";
 import { DateTimeFilter } from "../inputs/DateTimeFilter";
 import { IntFilter } from "../inputs/IntFilter";
 import { IntNullableFilter } from "../inputs/IntNullableFilter";
-import { MetActivitiesRelationFilter } from "../inputs/MetActivitiesRelationFilter";
+import { MetActivityRelationFilter } from "../inputs/MetActivityRelationFilter";
 import { StringNullableFilter } from "../inputs/StringNullableFilter";
 import { UserRelationFilter } from "../inputs/UserRelationFilter";
 
@@ -43,10 +43,10 @@ export class CompletedExerciseWhereInput {
   })
   userId?: IntFilter | undefined;
 
-  @TypeGraphQL.Field(_type => MetActivitiesRelationFilter, {
+  @TypeGraphQL.Field(_type => MetActivityRelationFilter, {
     nullable: true
   })
-  MetActivity?: MetActivitiesRelationFilter | undefined;
+  MetActivity?: MetActivityRelationFilter | undefined;
 
   @TypeGraphQL.Field(_type => IntNullableFilter, {
     nullable: true

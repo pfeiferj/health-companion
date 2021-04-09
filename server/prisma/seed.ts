@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 async function main() {
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1003,
       mets: 14.0,
@@ -10,7 +10,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1004,
       mets: 16.0,
@@ -19,7 +19,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1008,
       mets: 8.5,
@@ -28,7 +28,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1009,
       mets: 8.5,
@@ -37,7 +37,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1010,
       mets: 4.0,
@@ -46,7 +46,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1011,
       mets: 6.8,
@@ -55,7 +55,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1013,
       mets: 5.8,
@@ -64,7 +64,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1015,
       mets: 7.5,
@@ -73,7 +73,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1018,
       mets: 3.5,
@@ -82,7 +82,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1019,
       mets: 5.8,
@@ -91,7 +91,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1020,
       mets: 6.8,
@@ -100,7 +100,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1030,
       mets: 8.0,
@@ -109,7 +109,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1040,
       mets: 10.0,
@@ -118,7 +118,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1050,
       mets: 12.0,
@@ -128,7 +128,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1060,
       mets: 15.8,
@@ -137,7 +137,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1065,
       mets: 8.5,
@@ -146,7 +146,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1066,
       mets: 9.0,
@@ -155,7 +155,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 1070,
       mets: 5.0,
@@ -164,7 +164,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2001,
       mets: 2.3,
@@ -173,7 +173,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2003,
       mets: 3.8,
@@ -183,7 +183,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2005,
       mets: 7.2,
@@ -193,7 +193,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2008,
       mets: 5.0,
@@ -202,7 +202,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2010,
       mets: 7.0,
@@ -211,7 +211,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2011,
       mets: 3.5,
@@ -220,7 +220,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2012,
       mets: 6.8,
@@ -229,7 +229,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2013,
       mets: 8.8,
@@ -238,7 +238,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2014,
       mets: 11.0,
@@ -247,7 +247,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2015,
       mets: 14.0,
@@ -256,7 +256,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2017,
       mets: 4.8,
@@ -265,7 +265,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2019,
       mets: 8.5,
@@ -274,7 +274,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2020,
       mets: 8.0,
@@ -283,7 +283,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2022,
       mets: 3.8,
@@ -292,7 +292,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2024,
       mets: 2.8,
@@ -301,7 +301,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2030,
       mets: 3.5,
@@ -311,7 +311,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2035,
       mets: 4.3,
@@ -320,7 +320,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2040,
       mets: 8.0,
@@ -330,7 +330,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2045,
       mets: 3.5,
@@ -339,7 +339,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2048,
       mets: 5.0,
@@ -348,7 +348,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2050,
       mets: 6.0,
@@ -358,7 +358,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2052,
       mets: 5.0,
@@ -367,7 +367,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2054,
       mets: 3.5,
@@ -377,7 +377,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2060,
       mets: 5.5,
@@ -386,7 +386,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2061,
       mets: 5.0,
@@ -395,7 +395,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2062,
       mets: 7.8,
@@ -404,7 +404,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2064,
       mets: 3.8,
@@ -413,7 +413,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2065,
       mets: 9.0,
@@ -422,7 +422,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2068,
       mets: 12.3,
@@ -431,7 +431,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2070,
       mets: 6.0,
@@ -440,7 +440,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2071,
       mets: 4.8,
@@ -449,7 +449,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2072,
       mets: 7.0,
@@ -458,7 +458,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2073,
       mets: 8.5,
@@ -467,7 +467,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2074,
       mets: 12.0,
@@ -476,7 +476,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2080,
       mets: 6.8,
@@ -485,7 +485,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2085,
       mets: 11.0,
@@ -494,7 +494,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2090,
       mets: 6.0,
@@ -503,7 +503,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2101,
       mets: 2.3,
@@ -512,7 +512,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2105,
       mets: 3.0,
@@ -521,7 +521,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2110,
       mets: 6.8,
@@ -530,7 +530,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2112,
       mets: 2.8,
@@ -539,7 +539,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2115,
       mets: 2.8,
@@ -548,7 +548,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2117,
       mets: 4.3,
@@ -557,7 +557,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2120,
       mets: 5.3,
@@ -566,7 +566,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2135,
       mets: 1.3,
@@ -575,7 +575,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2140,
       mets: 2.3,
@@ -585,7 +585,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2143,
       mets: 4.0,
@@ -595,7 +595,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2146,
       mets: 6.0,
@@ -605,7 +605,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2150,
       mets: 2.5,
@@ -614,7 +614,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2160,
       mets: 4.0,
@@ -623,7 +623,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2170,
       mets: 2.0,
@@ -632,7 +632,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2180,
       mets: 3.3,
@@ -641,7 +641,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2200,
       mets: 5.3,
@@ -651,7 +651,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 2205,
       mets: 6.8,
@@ -661,7 +661,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3010,
       mets: 5.0,
@@ -670,7 +670,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3012,
       mets: 6.8,
@@ -679,7 +679,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3014,
       mets: 4.8,
@@ -688,7 +688,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3015,
       mets: 7.3,
@@ -697,7 +697,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3016,
       mets: 7.5,
@@ -706,7 +706,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3017,
       mets: 9.5,
@@ -715,7 +715,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3018,
       mets: 5.5,
@@ -724,7 +724,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3019,
       mets: 8.5,
@@ -733,7 +733,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3020,
       mets: 5.0,
@@ -742,7 +742,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3021,
       mets: 7.3,
@@ -751,7 +751,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3022,
       mets: 10.0,
@@ -760,7 +760,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3025,
       mets: 4.5,
@@ -770,7 +770,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3030,
       mets: 5.5,
@@ -779,7 +779,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3031,
       mets: 7.8,
@@ -789,7 +789,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3038,
       mets: 11.3,
@@ -798,7 +798,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3040,
       mets: 3.0,
@@ -808,7 +808,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3050,
       mets: 5.5,
@@ -817,7 +817,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 3060,
       mets: 3.5,
@@ -827,7 +827,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4001,
       mets: 3.5,
@@ -836,7 +836,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4005,
       mets: 4.5,
@@ -845,7 +845,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4007,
       mets: 4.0,
@@ -854,7 +854,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4010,
       mets: 4.3,
@@ -863,7 +863,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4020,
       mets: 4.0,
@@ -872,7 +872,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4030,
       mets: 2.0,
@@ -881,7 +881,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4040,
       mets: 3.5,
@@ -890,7 +890,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4050,
       mets: 6.0,
@@ -899,7 +899,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4060,
       mets: 2.0,
@@ -908,7 +908,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4061,
       mets: 1.8,
@@ -917,7 +917,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4062,
       mets: 3.5,
@@ -926,7 +926,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4063,
       mets: 3.8,
@@ -935,7 +935,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4064,
       mets: 3.0,
@@ -944,7 +944,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4065,
       mets: 2.3,
@@ -953,7 +953,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4070,
       mets: 2.5,
@@ -962,7 +962,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4080,
       mets: 6.0,
@@ -971,7 +971,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4081,
       mets: 11.3,
@@ -980,7 +980,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4083,
       mets: 4.0,
@@ -989,7 +989,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4085,
       mets: 2.5,
@@ -998,7 +998,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4086,
       mets: 2.0,
@@ -1007,7 +1007,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4090,
       mets: 2.5,
@@ -1016,7 +1016,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4095,
       mets: 3.0,
@@ -1025,7 +1025,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4100,
       mets: 5.0,
@@ -1034,7 +1034,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4110,
       mets: 6.0,
@@ -1043,7 +1043,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4115,
       mets: 3.3,
@@ -1052,7 +1052,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4120,
       mets: 5.0,
@@ -1061,7 +1061,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4123,
       mets: 3.3,
@@ -1070,7 +1070,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4124,
       mets: 2.0,
@@ -1079,7 +1079,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4125,
       mets: 9.5,
@@ -1088,7 +1088,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4130,
       mets: 2.5,
@@ -1097,7 +1097,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4140,
       mets: 2.3,
@@ -1106,7 +1106,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 4145,
       mets: 2.5,
@@ -1115,7 +1115,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5010,
       mets: 3.3,
@@ -1124,7 +1124,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5011,
       mets: 2.3,
@@ -1133,7 +1133,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5012,
       mets: 3.8,
@@ -1142,7 +1142,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5020,
       mets: 3.5,
@@ -1151,7 +1151,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5021,
       mets: 3.5,
@@ -1160,7 +1160,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5022,
       mets: 3.2,
@@ -1169,7 +1169,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5023,
       mets: 2.5,
@@ -1178,7 +1178,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5024,
       mets: 4.5,
@@ -1187,7 +1187,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5025,
       mets: 2.8,
@@ -1196,7 +1196,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5026,
       mets: 3.5,
@@ -1205,7 +1205,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5027,
       mets: 4.3,
@@ -1214,7 +1214,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5030,
       mets: 3.3,
@@ -1223,7 +1223,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5032,
       mets: 2.3,
@@ -1232,7 +1232,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5035,
       mets: 3.3,
@@ -1242,7 +1242,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5040,
       mets: 2.5,
@@ -1251,7 +1251,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5041,
       mets: 1.8,
@@ -1260,7 +1260,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5042,
       mets: 2.5,
@@ -1269,7 +1269,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5043,
       mets: 3.3,
@@ -1278,7 +1278,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5044,
       mets: 3.0,
@@ -1287,7 +1287,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5045,
       mets: 6.0,
@@ -1296,7 +1296,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5046,
       mets: 2.3,
@@ -1305,7 +1305,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5048,
       mets: 4.0,
@@ -1314,7 +1314,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5049,
       mets: 3.5,
@@ -1323,7 +1323,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5050,
       mets: 2.0,
@@ -1333,7 +1333,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5051,
       mets: 2.5,
@@ -1342,7 +1342,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5052,
       mets: 2.5,
@@ -1351,7 +1351,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5053,
       mets: 2.5,
@@ -1360,7 +1360,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5055,
       mets: 2.5,
@@ -1370,7 +1370,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5056,
       mets: 7.5,
@@ -1379,7 +1379,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5057,
       mets: 3.0,
@@ -1388,7 +1388,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5060,
       mets: 2.3,
@@ -1397,7 +1397,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5065,
       mets: 2.3,
@@ -1406,7 +1406,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5070,
       mets: 1.8,
@@ -1415,7 +1415,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5080,
       mets: 1.3,
@@ -1424,7 +1424,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5082,
       mets: 2.8,
@@ -1433,7 +1433,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5090,
       mets: 2.0,
@@ -1443,7 +1443,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5092,
       mets: 4.0,
@@ -1452,7 +1452,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5095,
       mets: 2.3,
@@ -1462,7 +1462,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5100,
       mets: 3.3,
@@ -1471,7 +1471,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5110,
       mets: 5.0,
@@ -1480,7 +1480,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5120,
       mets: 5.8,
@@ -1489,7 +1489,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5121,
       mets: 5.0,
@@ -1498,7 +1498,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5125,
       mets: 4.8,
@@ -1507,7 +1507,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5130,
       mets: 3.5,
@@ -1516,7 +1516,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5131,
       mets: 2.0,
@@ -1525,7 +1525,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5132,
       mets: 6.5,
@@ -1534,7 +1534,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5140,
       mets: 4.0,
@@ -1543,7 +1543,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5146,
       mets: 3.5,
@@ -1553,7 +1553,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5147,
       mets: 3.0,
@@ -1562,7 +1562,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5148,
       mets: 2.5,
@@ -1571,7 +1571,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5149,
       mets: 2.5,
@@ -1580,7 +1580,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5150,
       mets: 9.0,
@@ -1589,7 +1589,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5160,
       mets: 2.0,
@@ -1598,7 +1598,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5165,
       mets: 3.5,
@@ -1608,7 +1608,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5170,
       mets: 2.2,
@@ -1617,7 +1617,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5171,
       mets: 2.8,
@@ -1626,7 +1626,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5175,
       mets: 3.5,
@@ -1635,7 +1635,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5180,
       mets: 5.8,
@@ -1644,7 +1644,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5181,
       mets: 3.0,
@@ -1653,7 +1653,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5182,
       mets: 2.3,
@@ -1662,7 +1662,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5183,
       mets: 2.0,
@@ -1671,7 +1671,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5184,
       mets: 2.5,
@@ -1680,7 +1680,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5185,
       mets: 2.0,
@@ -1690,7 +1690,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5186,
       mets: 3.0,
@@ -1700,7 +1700,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5188,
       mets: 1.5,
@@ -1709,7 +1709,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5189,
       mets: 2.0,
@@ -1718,7 +1718,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5190,
       mets: 2.5,
@@ -1727,7 +1727,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5191,
       mets: 2.8,
@@ -1736,7 +1736,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5192,
       mets: 3.0,
@@ -1745,7 +1745,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5193,
       mets: 4.0,
@@ -1754,7 +1754,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5194,
       mets: 5.0,
@@ -1763,7 +1763,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5195,
       mets: 3.5,
@@ -1772,7 +1772,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5197,
       mets: 2.3,
@@ -1781,7 +1781,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5200,
       mets: 4.0,
@@ -1791,7 +1791,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 5205,
       mets: 2.3,
@@ -1800,7 +1800,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6010,
       mets: 3.0,
@@ -1809,7 +1809,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6020,
       mets: 4.0,
@@ -1818,7 +1818,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6030,
       mets: 3.3,
@@ -1827,7 +1827,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6040,
       mets: 3.0,
@@ -1836,7 +1836,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6050,
       mets: 6.0,
@@ -1846,7 +1846,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6052,
       mets: 3.8,
@@ -1855,7 +1855,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6060,
       mets: 3.3,
@@ -1864,7 +1864,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6070,
       mets: 6.0,
@@ -1873,7 +1873,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6072,
       mets: 4.0,
@@ -1882,7 +1882,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6074,
       mets: 2.3,
@@ -1891,7 +1891,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6080,
       mets: 5.0,
@@ -1900,7 +1900,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6090,
       mets: 4.5,
@@ -1909,7 +1909,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6100,
       mets: 5.0,
@@ -1918,7 +1918,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6110,
       mets: 5.0,
@@ -1927,7 +1927,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6120,
       mets: 5.0,
@@ -1936,7 +1936,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6122,
       mets: 5.0,
@@ -1945,7 +1945,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6124,
       mets: 3.0,
@@ -1954,7 +1954,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6126,
       mets: 2.5,
@@ -1963,7 +1963,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6127,
       mets: 4.5,
@@ -1972,7 +1972,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6128,
       mets: 6.0,
@@ -1981,7 +1981,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6130,
       mets: 4.5,
@@ -1990,7 +1990,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6140,
       mets: 3.8,
@@ -1999,7 +1999,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6144,
       mets: 3.0,
@@ -2008,7 +2008,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6150,
       mets: 5.0,
@@ -2017,7 +2017,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6160,
       mets: 3.3,
@@ -2026,7 +2026,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6165,
       mets: 4.5,
@@ -2035,7 +2035,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6167,
       mets: 3.0,
@@ -2044,7 +2044,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6170,
       mets: 3.0,
@@ -2053,7 +2053,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6180,
       mets: 6.0,
@@ -2062,7 +2062,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6190,
       mets: 4.5,
@@ -2071,7 +2071,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6200,
       mets: 4.5,
@@ -2080,7 +2080,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6205,
       mets: 2.0,
@@ -2089,7 +2089,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6210,
       mets: 5.0,
@@ -2098,7 +2098,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6220,
       mets: 4.5,
@@ -2107,7 +2107,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6225,
       mets: 2.0,
@@ -2116,7 +2116,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6230,
       mets: 4.5,
@@ -2125,7 +2125,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 6240,
       mets: 3.3,
@@ -2134,7 +2134,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7010,
       mets: 1.0,
@@ -2143,7 +2143,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7011,
       mets: 1.3,
@@ -2153,7 +2153,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7020,
       mets: 1.3,
@@ -2162,7 +2162,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7021,
       mets: 1.3,
@@ -2171,7 +2171,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7022,
       mets: 1.5,
@@ -2180,7 +2180,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7023,
       mets: 1.8,
@@ -2189,7 +2189,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7024,
       mets: 1.3,
@@ -2198,7 +2198,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7025,
       mets: 1.5,
@@ -2207,7 +2207,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7026,
       mets: 1.3,
@@ -2216,7 +2216,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7030,
       mets: 0.95,
@@ -2225,7 +2225,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7040,
       mets: 1.3,
@@ -2234,7 +2234,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7041,
       mets: 1.8,
@@ -2243,7 +2243,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7050,
       mets: 1.3,
@@ -2252,7 +2252,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7060,
       mets: 1.3,
@@ -2261,7 +2261,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7070,
       mets: 1.3,
@@ -2270,7 +2270,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 7075,
       mets: 1.0,
@@ -2279,7 +2279,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8009,
       mets: 3.3,
@@ -2289,7 +2289,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8010,
       mets: 5.5,
@@ -2298,7 +2298,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8019,
       mets: 4.5,
@@ -2307,7 +2307,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8020,
       mets: 6.3,
@@ -2316,7 +2316,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8025,
       mets: 3.5,
@@ -2325,7 +2325,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8030,
       mets: 6.3,
@@ -2335,7 +2335,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8040,
       mets: 5.0,
@@ -2344,7 +2344,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8045,
       mets: 3.5,
@@ -2353,7 +2353,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8050,
       mets: 5.0,
@@ -2362,7 +2362,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8052,
       mets: 7.8,
@@ -2371,7 +2371,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8055,
       mets: 2.8,
@@ -2380,7 +2380,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8057,
       mets: 8.3,
@@ -2389,7 +2389,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8058,
       mets: 5.3,
@@ -2398,7 +2398,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8060,
       mets: 5.8,
@@ -2407,7 +2407,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8065,
       mets: 2.3,
@@ -2416,7 +2416,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8070,
       mets: 4.0,
@@ -2425,7 +2425,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8080,
       mets: 6.3,
@@ -2434,7 +2434,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8090,
       mets: 5.0,
@@ -2443,7 +2443,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8095,
       mets: 5.5,
@@ -2452,7 +2452,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8100,
       mets: 2.5,
@@ -2461,7 +2461,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8110,
       mets: 6.0,
@@ -2470,7 +2470,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8120,
       mets: 5.0,
@@ -2479,7 +2479,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8125,
       mets: 4.5,
@@ -2488,7 +2488,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8130,
       mets: 2.5,
@@ -2497,7 +2497,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8135,
       mets: 2.0,
@@ -2506,7 +2506,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8140,
       mets: 4.3,
@@ -2515,7 +2515,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8145,
       mets: 4.3,
@@ -2524,7 +2524,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8150,
       mets: 4.5,
@@ -2533,7 +2533,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8160,
       mets: 3.8,
@@ -2542,7 +2542,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8165,
       mets: 4.0,
@@ -2551,7 +2551,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8170,
       mets: 4.0,
@@ -2560,7 +2560,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8180,
       mets: 3.0,
@@ -2569,7 +2569,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8190,
       mets: 4.0,
@@ -2578,7 +2578,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8192,
       mets: 5.5,
@@ -2587,7 +2587,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8195,
       mets: 5.3,
@@ -2596,7 +2596,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8200,
       mets: 6.0,
@@ -2605,7 +2605,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8202,
       mets: 7.5,
@@ -2614,7 +2614,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8210,
       mets: 4.0,
@@ -2623,7 +2623,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8215,
       mets: 3.5,
@@ -2632,7 +2632,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8220,
       mets: 3.0,
@@ -2641,7 +2641,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8230,
       mets: 1.5,
@@ -2650,7 +2650,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8239,
       mets: 3.5,
@@ -2659,7 +2659,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8240,
       mets: 4.5,
@@ -2668,7 +2668,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8241,
       mets: 5.0,
@@ -2677,7 +2677,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8245,
       mets: 3.8,
@@ -2686,7 +2686,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8246,
       mets: 3.5,
@@ -2695,7 +2695,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8248,
       mets: 4.5,
@@ -2705,7 +2705,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8250,
       mets: 3.3,
@@ -2714,7 +2714,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8251,
       mets: 3.0,
@@ -2723,7 +2723,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8255,
       mets: 5.5,
@@ -2732,7 +2732,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8260,
       mets: 3.0,
@@ -2741,7 +2741,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8261,
       mets: 4.0,
@@ -2750,7 +2750,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 8262,
       mets: 6.0,
@@ -2759,7 +2759,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9000,
       mets: 1.5,
@@ -2768,7 +2768,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9005,
       mets: 2.5,
@@ -2777,7 +2777,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9010,
       mets: 1.5,
@@ -2786,7 +2786,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9013,
       mets: 1.5,
@@ -2795,7 +2795,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9015,
       mets: 1.5,
@@ -2804,7 +2804,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9020,
       mets: 1.8,
@@ -2813,7 +2813,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9025,
       mets: 1.0,
@@ -2822,7 +2822,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9030,
       mets: 1.3,
@@ -2831,7 +2831,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9040,
       mets: 1.3,
@@ -2840,7 +2840,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9045,
       mets: 1.0,
@@ -2849,7 +2849,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9050,
       mets: 1.8,
@@ -2858,7 +2858,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9055,
       mets: 1.5,
@@ -2867,7 +2867,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9060,
       mets: 1.3,
@@ -2876,7 +2876,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9065,
       mets: 1.8,
@@ -2885,7 +2885,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9070,
       mets: 1.8,
@@ -2894,7 +2894,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9071,
       mets: 2.5,
@@ -2903,7 +2903,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9075,
       mets: 1.8,
@@ -2912,7 +2912,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9080,
       mets: 3.0,
@@ -2921,7 +2921,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9085,
       mets: 2.5,
@@ -2930,7 +2930,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9090,
       mets: 3.3,
@@ -2939,7 +2939,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9095,
       mets: 3.5,
@@ -2948,7 +2948,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9100,
       mets: 1.8,
@@ -2957,7 +2957,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9101,
       mets: 3.0,
@@ -2966,7 +2966,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9105,
       mets: 2.0,
@@ -2975,7 +2975,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9106,
       mets: 3.5,
@@ -2984,7 +2984,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9110,
       mets: 2.5,
@@ -2993,7 +2993,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 9115,
       mets: 1.5,
@@ -3002,7 +3002,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10010,
       mets: 1.8,
@@ -3011,7 +3011,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10020,
       mets: 2.3,
@@ -3020,7 +3020,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10030,
       mets: 2.3,
@@ -3029,7 +3029,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10035,
       mets: 2.5,
@@ -3038,7 +3038,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10040,
       mets: 3.8,
@@ -3047,7 +3047,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10045,
       mets: 3.0,
@@ -3056,7 +3056,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10050,
       mets: 2.0,
@@ -3065,7 +3065,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10060,
       mets: 1.8,
@@ -3074,7 +3074,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10070,
       mets: 2.3,
@@ -3083,7 +3083,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10074,
       mets: 2.0,
@@ -3092,7 +3092,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10077,
       mets: 2.0,
@@ -3101,7 +3101,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10080,
       mets: 3.5,
@@ -3110,7 +3110,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10090,
       mets: 1.8,
@@ -3119,7 +3119,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10100,
       mets: 2.5,
@@ -3128,7 +3128,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10110,
       mets: 1.8,
@@ -3137,7 +3137,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10120,
       mets: 2.0,
@@ -3146,7 +3146,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10125,
       mets: 3.0,
@@ -3155,7 +3155,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10130,
       mets: 4.0,
@@ -3164,7 +3164,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10131,
       mets: 5.5,
@@ -3173,7 +3173,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 10135,
       mets: 3.5,
@@ -3182,7 +3182,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11003,
       mets: 2.3,
@@ -3191,7 +3191,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11006,
       mets: 3.0,
@@ -3200,7 +3200,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11010,
       mets: 4.0,
@@ -3209,7 +3209,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11015,
       mets: 2.0,
@@ -3218,7 +3218,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11020,
       mets: 2.3,
@@ -3227,7 +3227,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11030,
       mets: 6.0,
@@ -3236,7 +3236,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11035,
       mets: 2.0,
@@ -3245,7 +3245,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11038,
       mets: 2.5,
@@ -3254,7 +3254,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11040,
       mets: 4.3,
@@ -3263,7 +3263,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11042,
       mets: 7.0,
@@ -3272,7 +3272,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11050,
       mets: 8.0,
@@ -3281,7 +3281,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11060,
       mets: 8.0,
@@ -3290,7 +3290,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11070,
       mets: 4.0,
@@ -3299,7 +3299,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11080,
       mets: 5.3,
@@ -3308,7 +3308,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11090,
       mets: 5.0,
@@ -3317,7 +3317,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11100,
       mets: 5.5,
@@ -3326,7 +3326,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11110,
       mets: 6.3,
@@ -3335,7 +3335,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11115,
       mets: 2.5,
@@ -3344,7 +3344,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11120,
       mets: 4.0,
@@ -3353,7 +3353,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11125,
       mets: 2.3,
@@ -3363,7 +3363,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11126,
       mets: 3.8,
@@ -3373,7 +3373,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11128,
       mets: 2.0,
@@ -3382,7 +3382,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11130,
       mets: 3.3,
@@ -3391,7 +3391,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11135,
       mets: 1.8,
@@ -3400,7 +3400,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11145,
       mets: 7.8,
@@ -3409,7 +3409,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11146,
       mets: 4.8,
@@ -3419,7 +3419,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11147,
       mets: 2.0,
@@ -3428,7 +3428,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11170,
       mets: 2.8,
@@ -3437,7 +3437,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11180,
       mets: 3.5,
@@ -3446,7 +3446,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11190,
       mets: 4.3,
@@ -3455,7 +3455,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11191,
       mets: 4.3,
@@ -3465,7 +3465,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11192,
       mets: 4.5,
@@ -3475,7 +3475,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11195,
       mets: 3.8,
@@ -3484,7 +3484,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11210,
       mets: 3.5,
@@ -3493,7 +3493,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11220,
       mets: 1.3,
@@ -3502,7 +3502,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11240,
       mets: 8.0,
@@ -3511,7 +3511,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11244,
       mets: 6.8,
@@ -3520,7 +3520,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11245,
       mets: 8.0,
@@ -3529,7 +3529,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11246,
       mets: 9.0,
@@ -3539,7 +3539,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11247,
       mets: 3.5,
@@ -3548,7 +3548,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11248,
       mets: 5.0,
@@ -3557,7 +3557,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11249,
       mets: 7.0,
@@ -3566,7 +3566,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11250,
       mets: 17.5,
@@ -3576,7 +3576,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11260,
       mets: 5.0,
@@ -3585,7 +3585,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11262,
       mets: 8.0,
@@ -3594,7 +3594,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11264,
       mets: 4.5,
@@ -3603,7 +3603,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11266,
       mets: 8.0,
@@ -3613,7 +3613,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11370,
       mets: 4.5,
@@ -3622,7 +3622,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11375,
       mets: 4.0,
@@ -3631,7 +3631,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11378,
       mets: 1.8,
@@ -3640,7 +3640,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11380,
       mets: 7.3,
@@ -3650,7 +3650,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11381,
       mets: 4.3,
@@ -3659,7 +3659,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11390,
       mets: 7.3,
@@ -3668,7 +3668,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11400,
       mets: 5.8,
@@ -3677,7 +3677,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11410,
       mets: 3.8,
@@ -3686,7 +3686,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11413,
       mets: 3.0,
@@ -3695,7 +3695,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11415,
       mets: 4.0,
@@ -3704,7 +3704,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11418,
       mets: 3.3,
@@ -3713,7 +3713,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11420,
       mets: 3.0,
@@ -3722,7 +3722,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11430,
       mets: 3.0,
@@ -3732,7 +3732,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11450,
       mets: 5.0,
@@ -3741,7 +3741,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11472,
       mets: 1.8,
@@ -3750,7 +3750,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11475,
       mets: 2.8,
@@ -3759,7 +3759,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11476,
       mets: 4.5,
@@ -3768,7 +3768,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11477,
       mets: 6.5,
@@ -3777,7 +3777,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11480,
       mets: 4.3,
@@ -3786,7 +3786,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11482,
       mets: 2.5,
@@ -3795,7 +3795,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11485,
       mets: 4.0,
@@ -3804,7 +3804,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11490,
       mets: 7.5,
@@ -3814,7 +3814,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11495,
       mets: 12.0,
@@ -3823,7 +3823,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11500,
       mets: 2.5,
@@ -3832,7 +3832,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11510,
       mets: 4.5,
@@ -3841,7 +3841,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11514,
       mets: 3.3,
@@ -3850,7 +3850,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11516,
       mets: 3.0,
@@ -3859,7 +3859,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11520,
       mets: 2.0,
@@ -3868,7 +3868,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11525,
       mets: 2.5,
@@ -3877,7 +3877,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11526,
       mets: 2.5,
@@ -3886,7 +3886,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11527,
       mets: 1.3,
@@ -3895,7 +3895,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11528,
       mets: 4.0,
@@ -3904,7 +3904,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11529,
       mets: 2.3,
@@ -3913,7 +3913,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11530,
       mets: 2.0,
@@ -3922,7 +3922,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11540,
       mets: 7.8,
@@ -3931,7 +3931,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11550,
       mets: 8.8,
@@ -3940,7 +3940,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11560,
       mets: 5.0,
@@ -3949,7 +3949,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11570,
       mets: 6.5,
@@ -3958,7 +3958,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11580,
       mets: 1.5,
@@ -3968,7 +3968,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11585,
       mets: 1.5,
@@ -3978,7 +3978,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11590,
       mets: 2.5,
@@ -3988,7 +3988,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11593,
       mets: 2.8,
@@ -3997,7 +3997,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11600,
       mets: 3.0,
@@ -4007,7 +4007,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11610,
       mets: 3.0,
@@ -4017,7 +4017,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11615,
       mets: 4.5,
@@ -4027,7 +4027,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11620,
       mets: 3.5,
@@ -4036,7 +4036,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11630,
       mets: 4.5,
@@ -4046,7 +4046,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11708,
       mets: 5.3,
@@ -4055,7 +4055,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11710,
       mets: 8.3,
@@ -4065,7 +4065,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11720,
       mets: 2.3,
@@ -4074,7 +4074,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11730,
       mets: 2.5,
@@ -4083,7 +4083,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11740,
       mets: 1.8,
@@ -4092,7 +4092,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11750,
       mets: 2.5,
@@ -4101,7 +4101,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11760,
       mets: 3.5,
@@ -4110,7 +4110,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11763,
       mets: 2.0,
@@ -4120,7 +4120,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11765,
       mets: 4.0,
@@ -4130,7 +4130,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11766,
       mets: 6.5,
@@ -4140,7 +4140,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11767,
       mets: 2.0,
@@ -4149,7 +4149,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11770,
       mets: 1.3,
@@ -4158,7 +4158,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11780,
       mets: 6.3,
@@ -4167,7 +4167,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11790,
       mets: 8.0,
@@ -4176,7 +4176,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11791,
       mets: 2.0,
@@ -4185,7 +4185,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11792,
       mets: 3.5,
@@ -4194,7 +4194,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11793,
       mets: 4.3,
@@ -4203,7 +4203,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11795,
       mets: 3.5,
@@ -4212,7 +4212,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11796,
       mets: 3.0,
@@ -4221,7 +4221,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11797,
       mets: 3.8,
@@ -4230,7 +4230,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11800,
       mets: 4.5,
@@ -4239,7 +4239,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11805,
       mets: 3.5,
@@ -4248,7 +4248,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11810,
       mets: 4.8,
@@ -4257,7 +4257,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11820,
       mets: 5.0,
@@ -4266,7 +4266,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11830,
       mets: 6.5,
@@ -4275,7 +4275,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11840,
       mets: 7.5,
@@ -4284,7 +4284,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11850,
       mets: 8.5,
@@ -4293,7 +4293,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 11870,
       mets: 3.0,
@@ -4302,7 +4302,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12010,
       mets: 6.0,
@@ -4311,7 +4311,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12020,
       mets: 7.0,
@@ -4320,7 +4320,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12025,
       mets: 8.0,
@@ -4329,7 +4329,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12027,
       mets: 4.5,
@@ -4338,7 +4338,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12029,
       mets: 6.0,
@@ -4347,7 +4347,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12030,
       mets: 8.3,
@@ -4356,7 +4356,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12040,
       mets: 9.0,
@@ -4365,7 +4365,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12050,
       mets: 9.8,
@@ -4374,7 +4374,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12060,
       mets: 10.5,
@@ -4383,7 +4383,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12070,
       mets: 11.0,
@@ -4392,7 +4392,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12080,
       mets: 11.5,
@@ -4401,7 +4401,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12090,
       mets: 11.8,
@@ -4410,7 +4410,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12100,
       mets: 12.3,
@@ -4419,7 +4419,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12110,
       mets: 12.8,
@@ -4428,7 +4428,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12120,
       mets: 14.5,
@@ -4437,7 +4437,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12130,
       mets: 16.0,
@@ -4446,7 +4446,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12132,
       mets: 19.0,
@@ -4455,7 +4455,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12134,
       mets: 19.8,
@@ -4464,7 +4464,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12135,
       mets: 23.0,
@@ -4473,7 +4473,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12140,
       mets: 9.0,
@@ -4482,7 +4482,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12150,
       mets: 8.0,
@@ -4491,7 +4491,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12170,
       mets: 15.0,
@@ -4500,7 +4500,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12180,
       mets: 10.0,
@@ -4509,7 +4509,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12190,
       mets: 8.0,
@@ -4518,7 +4518,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 12200,
       mets: 13.3,
@@ -4527,7 +4527,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 13000,
       mets: 2.3,
@@ -4536,7 +4536,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 13009,
       mets: 1.8,
@@ -4545,7 +4545,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 13010,
       mets: 1.5,
@@ -4554,7 +4554,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 13020,
       mets: 2.5,
@@ -4563,7 +4563,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 13030,
       mets: 1.5,
@@ -4572,7 +4572,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 13035,
       mets: 2.0,
@@ -4581,7 +4581,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 13036,
       mets: 1.5,
@@ -4590,7 +4590,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 13040,
       mets: 2.0,
@@ -4600,7 +4600,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 13045,
       mets: 2.5,
@@ -4609,7 +4609,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 13046,
       mets: 1.3,
@@ -4618,7 +4618,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 13050,
       mets: 2.0,
@@ -4627,7 +4627,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 14010,
       mets: 2.8,
@@ -4636,7 +4636,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 14020,
       mets: 1.8,
@@ -4645,7 +4645,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 14030,
       mets: 1.3,
@@ -4654,7 +4654,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15000,
       mets: 5.5,
@@ -4663,7 +4663,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15010,
       mets: 4.3,
@@ -4672,7 +4672,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15020,
       mets: 7.0,
@@ -4681,7 +4681,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15030,
       mets: 5.5,
@@ -4690,7 +4690,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15040,
       mets: 8.0,
@@ -4699,7 +4699,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15050,
       mets: 6.0,
@@ -4708,7 +4708,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15055,
       mets: 6.5,
@@ -4717,7 +4717,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15060,
       mets: 7.0,
@@ -4726,7 +4726,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15070,
       mets: 4.5,
@@ -4735,7 +4735,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15072,
       mets: 9.3,
@@ -4744,7 +4744,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15075,
       mets: 7.8,
@@ -4753,7 +4753,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15080,
       mets: 2.5,
@@ -4762,7 +4762,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15090,
       mets: 3.0,
@@ -4771,7 +4771,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15092,
       mets: 3.8,
@@ -4780,7 +4780,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15100,
       mets: 12.8,
@@ -4789,7 +4789,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15110,
       mets: 5.5,
@@ -4798,7 +4798,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15120,
       mets: 7.8,
@@ -4807,7 +4807,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15130,
       mets: 7.0,
@@ -4816,7 +4816,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15135,
       mets: 5.8,
@@ -4826,7 +4826,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15138,
       mets: 6.0,
@@ -4835,7 +4835,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15140,
       mets: 4.0,
@@ -4844,7 +4844,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15142,
       mets: 8.0,
@@ -4853,7 +4853,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15150,
       mets: 4.8,
@@ -4862,7 +4862,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15160,
       mets: 3.3,
@@ -4871,7 +4871,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15170,
       mets: 4.0,
@@ -4880,7 +4880,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15180,
       mets: 2.5,
@@ -4889,7 +4889,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15190,
       mets: 6.0,
@@ -4898,7 +4898,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15192,
       mets: 8.5,
@@ -4907,7 +4907,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15200,
       mets: 6.0,
@@ -4916,7 +4916,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15210,
       mets: 8.0,
@@ -4925,7 +4925,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15230,
       mets: 8.0,
@@ -4934,7 +4934,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15232,
       mets: 4.0,
@@ -4943,7 +4943,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15235,
       mets: 2.5,
@@ -4952,7 +4952,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15240,
       mets: 3.0,
@@ -4961,7 +4961,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15250,
       mets: 8.0,
@@ -4970,7 +4970,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15255,
       mets: 4.8,
@@ -4979,7 +4979,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15265,
       mets: 4.3,
@@ -4988,7 +4988,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15270,
       mets: 3.0,
@@ -4997,7 +4997,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15285,
       mets: 5.3,
@@ -5006,7 +5006,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15290,
       mets: 3.5,
@@ -5015,7 +5015,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15300,
       mets: 3.8,
@@ -5024,7 +5024,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15310,
       mets: 4.0,
@@ -5033,7 +5033,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15320,
       mets: 12.0,
@@ -5042,7 +5042,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15330,
       mets: 8.0,
@@ -5051,7 +5051,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15335,
       mets: 4.0,
@@ -5060,7 +5060,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15340,
       mets: 3.5,
@@ -5069,7 +5069,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15350,
       mets: 7.8,
@@ -5078,7 +5078,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15360,
       mets: 8.0,
@@ -5087,7 +5087,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15362,
       mets: 10.0,
@@ -5096,7 +5096,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15370,
       mets: 5.5,
@@ -5105,7 +5105,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15375,
       mets: 4.3,
@@ -5114,7 +5114,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15380,
       mets: 4.5,
@@ -5123,7 +5123,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15390,
       mets: 5.8,
@@ -5132,7 +5132,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15395,
       mets: 7.3,
@@ -5141,7 +5141,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15400,
       mets: 3.8,
@@ -5150,7 +5150,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15402,
       mets: 9.0,
@@ -5159,7 +5159,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15408,
       mets: 1.8,
@@ -5168,7 +5168,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15410,
       mets: 3.0,
@@ -5177,7 +5177,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15420,
       mets: 12.0,
@@ -5186,7 +5186,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15425,
       mets: 5.3,
@@ -5195,7 +5195,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15430,
       mets: 10.3,
@@ -5205,7 +5205,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15440,
       mets: 4.0,
@@ -5214,7 +5214,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15450,
       mets: 7.0,
@@ -5223,7 +5223,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15460,
       mets: 8.0,
@@ -5232,7 +5232,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15465,
       mets: 3.3,
@@ -5241,7 +5241,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15470,
       mets: 4.0,
@@ -5250,7 +5250,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15480,
       mets: 9.0,
@@ -5259,7 +5259,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15490,
       mets: 10.0,
@@ -5268,7 +5268,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15500,
       mets: 6.0,
@@ -5277,7 +5277,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15510,
       mets: 8.0,
@@ -5286,7 +5286,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15520,
       mets: 10.0,
@@ -5295,7 +5295,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15530,
       mets: 7.0,
@@ -5304,7 +5304,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15533,
       mets: 8.0,
@@ -5313,7 +5313,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15535,
       mets: 7.5,
@@ -5322,7 +5322,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15537,
       mets: 5.8,
@@ -5331,7 +5331,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15540,
       mets: 5.0,
@@ -5340,7 +5340,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15542,
       mets: 4.0,
@@ -5349,7 +5349,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15544,
       mets: 5.5,
@@ -5358,7 +5358,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15546,
       mets: 7.0,
@@ -5367,7 +5367,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15550,
       mets: 12.3,
@@ -5376,7 +5376,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15551,
       mets: 11.8,
@@ -5385,7 +5385,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15552,
       mets: 8.8,
@@ -5394,7 +5394,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15560,
       mets: 8.3,
@@ -5403,7 +5403,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15562,
       mets: 6.3,
@@ -5412,7 +5412,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15570,
       mets: 3.0,
@@ -5421,7 +5421,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15580,
       mets: 5.0,
@@ -5430,7 +5430,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15582,
       mets: 6.0,
@@ -5439,7 +5439,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15590,
       mets: 7.0,
@@ -5448,7 +5448,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15591,
       mets: 7.5,
@@ -5457,7 +5457,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15592,
       mets: 9.8,
@@ -5467,7 +5467,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15593,
       mets: 12.3,
@@ -5477,7 +5477,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15594,
       mets: 14.0,
@@ -5486,7 +5486,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15600,
       mets: 3.5,
@@ -5495,7 +5495,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15605,
       mets: 10.0,
@@ -5504,7 +5504,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15610,
       mets: 7.0,
@@ -5513,7 +5513,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15620,
       mets: 5.0,
@@ -5522,7 +5522,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15625,
       mets: 4.0,
@@ -5531,7 +5531,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15630,
       mets: 4.0,
@@ -5540,7 +5540,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15640,
       mets: 6.0,
@@ -5549,7 +5549,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15645,
       mets: 3.3,
@@ -5558,7 +5558,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15650,
       mets: 12.0,
@@ -5567,7 +5567,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15652,
       mets: 7.3,
@@ -5576,7 +5576,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15660,
       mets: 4.0,
@@ -5585,7 +5585,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15670,
       mets: 3.0,
@@ -5594,7 +5594,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15672,
       mets: 1.5,
@@ -5603,7 +5603,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15675,
       mets: 7.3,
@@ -5612,7 +5612,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15680,
       mets: 6.0,
@@ -5621,7 +5621,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15685,
       mets: 4.5,
@@ -5630,7 +5630,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15690,
       mets: 8.0,
@@ -5639,7 +5639,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15695,
       mets: 5.0,
@@ -5648,7 +5648,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15700,
       mets: 3.5,
@@ -5657,7 +5657,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15702,
       mets: 4.5,
@@ -5666,7 +5666,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15710,
       mets: 4.0,
@@ -5675,7 +5675,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15711,
       mets: 6.0,
@@ -5684,7 +5684,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15720,
       mets: 3.0,
@@ -5693,7 +5693,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15725,
       mets: 8.0,
@@ -5702,7 +5702,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15730,
       mets: 6.0,
@@ -5711,7 +5711,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15731,
       mets: 7.0,
@@ -5720,7 +5720,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15732,
       mets: 4.0,
@@ -5729,7 +5729,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15733,
       mets: 6.0,
@@ -5738,7 +5738,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 15734,
       mets: 10.0,
@@ -5747,7 +5747,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 16010,
       mets: 2.5,
@@ -5756,7 +5756,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 16015,
       mets: 1.3,
@@ -5765,7 +5765,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 16016,
       mets: 1.3,
@@ -5774,7 +5774,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 16020,
       mets: 1.8,
@@ -5783,7 +5783,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 16030,
       mets: 3.5,
@@ -5792,7 +5792,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 16035,
       mets: 6.3,
@@ -5801,7 +5801,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 16040,
       mets: 6.0,
@@ -5810,7 +5810,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 16050,
       mets: 2.5,
@@ -5819,7 +5819,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 16060,
       mets: 3.5,
@@ -5828,7 +5828,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17010,
       mets: 7.0,
@@ -5837,7 +5837,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17012,
       mets: 7.8,
@@ -5846,7 +5846,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17020,
       mets: 5.0,
@@ -5855,7 +5855,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17021,
       mets: 2.3,
@@ -5864,7 +5864,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17025,
       mets: 8.3,
@@ -5873,7 +5873,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17026,
       mets: 5.0,
@@ -5882,7 +5882,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17027,
       mets: 6.0,
@@ -5891,7 +5891,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17028,
       mets: 8.0,
@@ -5900,7 +5900,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17029,
       mets: 10.0,
@@ -5909,7 +5909,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17030,
       mets: 12.0,
@@ -5918,7 +5918,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17031,
       mets: 3.5,
@@ -5927,7 +5927,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17033,
       mets: 6.3,
@@ -5936,7 +5936,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17035,
       mets: 6.5,
@@ -5945,7 +5945,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17040,
       mets: 7.3,
@@ -5954,7 +5954,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17050,
       mets: 8.3,
@@ -5963,7 +5963,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17060,
       mets: 9.0,
@@ -5972,7 +5972,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17070,
       mets: 3.5,
@@ -5981,7 +5981,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17080,
       mets: 6.0,
@@ -5990,7 +5990,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17082,
       mets: 5.3,
@@ -5999,7 +5999,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17085,
       mets: 2.5,
@@ -6008,7 +6008,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17088,
       mets: 4.5,
@@ -6017,7 +6017,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17090,
       mets: 8.0,
@@ -6026,7 +6026,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17100,
       mets: 4.0,
@@ -6035,7 +6035,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17105,
       mets: 3.8,
@@ -6044,7 +6044,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17110,
       mets: 6.5,
@@ -6053,7 +6053,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17130,
       mets: 8.0,
@@ -6062,7 +6062,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17133,
       mets: 4.0,
@@ -6071,7 +6071,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17134,
       mets: 8.8,
@@ -6080,7 +6080,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17140,
       mets: 5.0,
@@ -6089,7 +6089,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17150,
       mets: 2.0,
@@ -6098,7 +6098,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17151,
       mets: 2.0,
@@ -6107,7 +6107,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17152,
       mets: 2.8,
@@ -6116,7 +6116,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17160,
       mets: 3.5,
@@ -6125,7 +6125,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17161,
       mets: 2.5,
@@ -6135,7 +6135,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17162,
       mets: 2.5,
@@ -6144,7 +6144,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17165,
       mets: 3.0,
@@ -6153,7 +6153,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17170,
       mets: 3.0,
@@ -6162,7 +6162,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17180,
       mets: 3.3,
@@ -6171,7 +6171,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17190,
       mets: 3.5,
@@ -6180,7 +6180,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17200,
       mets: 4.3,
@@ -6189,7 +6189,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17210,
       mets: 5.3,
@@ -6198,7 +6198,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17211,
       mets: 8.0,
@@ -6207,7 +6207,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17220,
       mets: 5.0,
@@ -6216,7 +6216,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17230,
       mets: 7.0,
@@ -6225,7 +6225,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17231,
       mets: 8.3,
@@ -6234,7 +6234,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17235,
       mets: 9.8,
@@ -6243,7 +6243,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17250,
       mets: 3.5,
@@ -6252,7 +6252,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17260,
       mets: 4.8,
@@ -6261,7 +6261,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17262,
       mets: 4.5,
@@ -6270,7 +6270,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17270,
       mets: 4.0,
@@ -6279,7 +6279,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17280,
       mets: 2.5,
@@ -6288,7 +6288,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17302,
       mets: 4.8,
@@ -6298,7 +6298,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17305,
       mets: 9.5,
@@ -6307,7 +6307,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17310,
       mets: 6.8,
@@ -6316,7 +6316,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17320,
       mets: 6.0,
@@ -6325,7 +6325,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 17325,
       mets: 8.0,
@@ -6334,7 +6334,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18010,
       mets: 2.5,
@@ -6343,7 +6343,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18012,
       mets: 1.3,
@@ -6352,7 +6352,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18020,
       mets: 4.0,
@@ -6361,7 +6361,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18025,
       mets: 3.3,
@@ -6370,7 +6370,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18030,
       mets: 7.0,
@@ -6379,7 +6379,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18040,
       mets: 2.8,
@@ -6388,7 +6388,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18050,
       mets: 5.8,
@@ -6397,7 +6397,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18060,
       mets: 12.5,
@@ -6406,7 +6406,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18070,
       mets: 3.5,
@@ -6415,7 +6415,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18080,
       mets: 12.0,
@@ -6424,7 +6424,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18090,
       mets: 3.0,
@@ -6433,7 +6433,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18100,
       mets: 5.0,
@@ -6442,7 +6442,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18110,
       mets: 4.0,
@@ -6451,7 +6451,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18120,
       mets: 3.0,
@@ -6460,7 +6460,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18130,
       mets: 4.5,
@@ -6469,7 +6469,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18140,
       mets: 3.3,
@@ -6478,7 +6478,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18150,
       mets: 6.0,
@@ -6487,7 +6487,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18160,
       mets: 7.0,
@@ -6496,7 +6496,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18180,
       mets: 15.8,
@@ -6505,7 +6505,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18190,
       mets: 11.8,
@@ -6514,7 +6514,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18200,
       mets: 7.0,
@@ -6523,7 +6523,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18210,
       mets: 5.0,
@@ -6532,7 +6532,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18220,
       mets: 3.0,
@@ -6541,7 +6541,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18222,
       mets: 5.0,
@@ -6550,7 +6550,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18225,
       mets: 6.0,
@@ -6559,7 +6559,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18230,
       mets: 9.8,
@@ -6568,7 +6568,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18240,
       mets: 5.8,
@@ -6577,7 +6577,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18250,
       mets: 9.5,
@@ -6586,7 +6586,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18255,
       mets: 4.8,
@@ -6595,7 +6595,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18260,
       mets: 10.3,
@@ -6604,7 +6604,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18265,
       mets: 5.3,
@@ -6613,7 +6613,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18270,
       mets: 13.8,
@@ -6622,7 +6622,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18280,
       mets: 10.0,
@@ -6631,7 +6631,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18290,
       mets: 8.3,
@@ -6640,7 +6640,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18300,
       mets: 6.0,
@@ -6649,7 +6649,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18310,
       mets: 6.0,
@@ -6658,7 +6658,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18320,
       mets: 7.0,
@@ -6667,7 +6667,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18330,
       mets: 8.0,
@@ -6676,7 +6676,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18340,
       mets: 9.8,
@@ -6685,7 +6685,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18350,
       mets: 3.5,
@@ -6694,7 +6694,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18352,
       mets: 2.3,
@@ -6703,7 +6703,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18355,
       mets: 5.5,
@@ -6712,7 +6712,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18360,
       mets: 10.0,
@@ -6721,7 +6721,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18365,
       mets: 3.0,
@@ -6730,7 +6730,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18366,
       mets: 9.8,
@@ -6739,7 +6739,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18367,
       mets: 2.5,
@@ -6748,7 +6748,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18368,
       mets: 4.5,
@@ -6757,7 +6757,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18369,
       mets: 6.8,
@@ -6766,7 +6766,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18370,
       mets: 5.0,
@@ -6775,7 +6775,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18380,
       mets: 5.0,
@@ -6784,7 +6784,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18385,
       mets: 11.0,
@@ -6793,7 +6793,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 18390,
       mets: 13.5,
@@ -6802,7 +6802,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19005,
       mets: 7.5,
@@ -6811,7 +6811,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19006,
       mets: 2.5,
@@ -6820,7 +6820,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19010,
       mets: 6.0,
@@ -6829,7 +6829,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19011,
       mets: 2.0,
@@ -6838,7 +6838,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19018,
       mets: 14.0,
@@ -6847,7 +6847,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19020,
       mets: 5.5,
@@ -6856,7 +6856,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19030,
       mets: 7.0,
@@ -6865,7 +6865,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19040,
       mets: 9.0,
@@ -6874,7 +6874,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19050,
       mets: 13.3,
@@ -6883,7 +6883,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19060,
       mets: 7.0,
@@ -6892,7 +6892,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19075,
       mets: 7.0,
@@ -6901,7 +6901,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19080,
       mets: 6.8,
@@ -6910,7 +6910,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19090,
       mets: 9.0,
@@ -6919,7 +6919,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19100,
       mets: 12.5,
@@ -6928,7 +6928,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19110,
       mets: 15.0,
@@ -6937,7 +6937,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19130,
       mets: 15.5,
@@ -6946,7 +6946,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19135,
       mets: 13.3,
@@ -6955,7 +6955,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19140,
       mets: 13.5,
@@ -6964,7 +6964,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19150,
       mets: 4.3,
@@ -6973,7 +6973,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19160,
       mets: 5.3,
@@ -6982,7 +6982,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19170,
       mets: 8.0,
@@ -6991,7 +6991,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19175,
       mets: 12.5,
@@ -7000,7 +7000,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19180,
       mets: 7.0,
@@ -7009,7 +7009,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19190,
       mets: 5.3,
@@ -7018,7 +7018,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19192,
       mets: 10.0,
@@ -7027,7 +7027,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19200,
       mets: 3.5,
@@ -7036,7 +7036,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19202,
       mets: 2.0,
@@ -7045,7 +7045,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19252,
       mets: 5.3,
@@ -7054,7 +7054,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19254,
       mets: 7.5,
@@ -7063,7 +7063,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 19260,
       mets: 2.5,
@@ -7072,7 +7072,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20000,
       mets: 1.3,
@@ -7081,7 +7081,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20001,
       mets: 2.0,
@@ -7090,7 +7090,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20005,
       mets: 1.8,
@@ -7100,7 +7100,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20010,
       mets: 1.3,
@@ -7109,7 +7109,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20015,
       mets: 1.3,
@@ -7118,7 +7118,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20020,
       mets: 2.0,
@@ -7127,7 +7127,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20025,
       mets: 1.3,
@@ -7136,7 +7136,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20030,
       mets: 1.8,
@@ -7145,7 +7145,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20035,
       mets: 2.0,
@@ -7154,7 +7154,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20036,
       mets: 2.0,
@@ -7163,7 +7163,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20037,
       mets: 3.5,
@@ -7172,7 +7172,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20038,
       mets: 4.3,
@@ -7181,7 +7181,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20039,
       mets: 2.0,
@@ -7190,7 +7190,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20040,
       mets: 5.0,
@@ -7199,7 +7199,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20045,
       mets: 2.5,
@@ -7208,7 +7208,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20046,
       mets: 2.0,
@@ -7217,7 +7217,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20047,
       mets: 3.3,
@@ -7226,7 +7226,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20050,
       mets: 1.5,
@@ -7235,7 +7235,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20055,
       mets: 2.0,
@@ -7244,7 +7244,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20060,
       mets: 3.3,
@@ -7253,7 +7253,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20061,
       mets: 4.0,
@@ -7262,7 +7262,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20065,
       mets: 3.5,
@@ -7271,7 +7271,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20095,
       mets: 4.5,
@@ -7280,7 +7280,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 20100,
       mets: 1.3,
@@ -7289,7 +7289,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21000,
       mets: 1.5,
@@ -7298,7 +7298,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21005,
       mets: 1.5,
@@ -7307,7 +7307,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21010,
       mets: 2.5,
@@ -7316,7 +7316,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21015,
       mets: 2.3,
@@ -7325,7 +7325,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21016,
       mets: 2.0,
@@ -7334,7 +7334,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21017,
       mets: 3.0,
@@ -7343,7 +7343,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21018,
       mets: 3.5,
@@ -7352,7 +7352,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21019,
       mets: 5.8,
@@ -7361,7 +7361,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21020,
       mets: 3.0,
@@ -7371,7 +7371,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21025,
       mets: 3.5,
@@ -7380,7 +7380,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21030,
       mets: 4.5,
@@ -7389,7 +7389,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21035,
       mets: 1.3,
@@ -7398,7 +7398,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21040,
       mets: 2.0,
@@ -7407,7 +7407,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21045,
       mets: 3.5,
@@ -7416,7 +7416,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21050,
       mets: 4.3,
@@ -7425,7 +7425,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21055,
       mets: 3.5,
@@ -7434,7 +7434,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21060,
       mets: 4.5,
@@ -7443,7 +7443,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21065,
       mets: 4.8,
@@ -7452,7 +7452,7 @@ async function main() {
     },
   });
 
-  await prisma.metActivities.create({
+  await prisma.metActivity.create({
     data: {
       metId: 21070,
       mets: 3.0,

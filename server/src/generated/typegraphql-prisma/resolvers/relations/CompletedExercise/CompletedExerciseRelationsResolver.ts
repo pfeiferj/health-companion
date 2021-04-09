@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
 import { CompletedExercise } from "../../../models/CompletedExercise";
-import { MetActivities } from "../../../models/MetActivities";
+import { MetActivity } from "../../../models/MetActivity";
 import { User } from "../../../models/User";
 import { transformFields, getPrismaFromContext } from "../../../helpers";
 
@@ -17,10 +17,10 @@ export class CompletedExerciseRelationsResolver {
     }).User({});
   }
 
-  @TypeGraphQL.FieldResolver(_type => MetActivities, {
+  @TypeGraphQL.FieldResolver(_type => MetActivity, {
     nullable: true
   })
-  async MetActivity(@TypeGraphQL.Root() completedExercise: CompletedExercise, @TypeGraphQL.Ctx() ctx: any): Promise<MetActivities | null> {
+  async MetActivity(@TypeGraphQL.Root() completedExercise: CompletedExercise, @TypeGraphQL.Ctx() ctx: any): Promise<MetActivity | null> {
     return getPrismaFromContext(ctx).completedExercise.findUnique({
       where: {
         id: completedExercise.id,

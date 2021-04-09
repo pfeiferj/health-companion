@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../scalars";
-import { MetActivities } from "../models/MetActivities";
+import { MetActivity } from "../models/MetActivity";
 import { User } from "../models/User";
 
 /** An exercise completed by a user. Can be associated to a metActivity to estimate calories burnt. */
@@ -23,7 +23,7 @@ export class CompletedExercise {
   })
   userId!: number;
 
-  MetActivity?: MetActivities | null;
+  MetActivity?: MetActivity | null;
 
   @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
     nullable: true

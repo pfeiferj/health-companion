@@ -3,7 +3,7 @@ import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
 import { DateTimeFieldUpdateOperationsInput } from "../inputs/DateTimeFieldUpdateOperationsInput";
-import { MetActivitiesUpdateOneWithoutCompletedExerciseInput } from "../inputs/MetActivitiesUpdateOneWithoutCompletedExerciseInput";
+import { MetActivityUpdateOneWithoutCompletedExerciseInput } from "../inputs/MetActivityUpdateOneWithoutCompletedExerciseInput";
 import { NullableStringFieldUpdateOperationsInput } from "../inputs/NullableStringFieldUpdateOperationsInput";
 
 @TypeGraphQL.InputType({
@@ -20,8 +20,8 @@ export class CompletedExerciseUpdateWithoutUserInput {
   })
   completedAt?: DateTimeFieldUpdateOperationsInput | undefined;
 
-  @TypeGraphQL.Field(_type => MetActivitiesUpdateOneWithoutCompletedExerciseInput, {
+  @TypeGraphQL.Field(_type => MetActivityUpdateOneWithoutCompletedExerciseInput, {
     nullable: true
   })
-  MetActivity?: MetActivitiesUpdateOneWithoutCompletedExerciseInput | undefined;
+  MetActivity?: MetActivityUpdateOneWithoutCompletedExerciseInput | undefined;
 }

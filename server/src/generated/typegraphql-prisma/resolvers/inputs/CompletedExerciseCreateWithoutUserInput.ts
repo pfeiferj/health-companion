@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
-import { MetActivitiesCreateNestedOneWithoutCompletedExerciseInput } from "../inputs/MetActivitiesCreateNestedOneWithoutCompletedExerciseInput";
+import { MetActivityCreateNestedOneWithoutCompletedExerciseInput } from "../inputs/MetActivityCreateNestedOneWithoutCompletedExerciseInput";
 
 @TypeGraphQL.InputType({
   isAbstract: true
@@ -18,8 +18,8 @@ export class CompletedExerciseCreateWithoutUserInput {
   })
   completedAt?: Date | undefined;
 
-  @TypeGraphQL.Field(_type => MetActivitiesCreateNestedOneWithoutCompletedExerciseInput, {
+  @TypeGraphQL.Field(_type => MetActivityCreateNestedOneWithoutCompletedExerciseInput, {
     nullable: true
   })
-  MetActivity?: MetActivitiesCreateNestedOneWithoutCompletedExerciseInput | undefined;
+  MetActivity?: MetActivityCreateNestedOneWithoutCompletedExerciseInput | undefined;
 }
