@@ -20,6 +20,32 @@ const resolversEnhanceMap: ResolversEnhanceMap = {
         return next();
       }),
     ],
+    findFirstUser: [Authorized()],
+    users: [Authorized()],
+    aggregateUser: [Authorized()],
+    deleteUser: [
+      Authorized(),
+      UseMiddleware(async (data, next) => {
+        data.args.where.id = data.context.req.user.id;
+        return next();
+      }),
+    ],
+    updateUser: [
+      Authorized(),
+      UseMiddleware(async (data, next) => {
+        data.args.where.id = data.context.req.user.id;
+        return next();
+      }),
+    ],
+    deleteManyUser: [Authorized(['ADMIN'])],
+    updateManyUser: [Authorized(['ADMIN'])],
+    upsertUser: [
+      Authorized(),
+      UseMiddleware(async (data, next) => {
+        data.args.where.id = data.context.req.user.id;
+        return next();
+      }),
+    ],
   },
 };
 
