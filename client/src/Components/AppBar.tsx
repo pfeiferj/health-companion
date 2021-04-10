@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { useLocation } from 'react-router-dom';
+import { gql, useQuery } from '@apollo/client';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,10 +27,23 @@ const PATH_TO_TITLE: Record<string,string> = {
   '/about': 'About'
 };
 
+
+const GET_USER = gql`
+  query {
+    user(where: {id:-1}) {
+      id
+      username
+      name
+      units
+    }
+  }
+`;
+
 export default function ButtonAppBar() {
   const classes = useStyles();
   const location = useLocation();
   const title = PATH_TO_TITLE[location.pathname];
+  const { loading, error, data: user } = useQuery(GET_USER);
 
   return (
     <div className={classes.root}>

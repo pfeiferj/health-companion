@@ -9,10 +9,13 @@ import { v4 as uuidv4 } from 'uuid';
 import { registerAuth, authChecker, AuthResolver } from './auth';
 import config from './config';
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 
 import './enhancers/register';
 
 const app = express();
+
+app.use(cors());
 
 app.use(cookieParser());
 

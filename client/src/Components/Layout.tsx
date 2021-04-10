@@ -1,5 +1,6 @@
 import AppBar from './AppBar';
 import Login from '../Pages/Login';
+import Dashboard from '../Pages/Dashboard';
 import {
   Switch,
   Route,
@@ -20,7 +21,7 @@ export default function Layout() {
           Users
         </Route>
         <Route path="/">
-          Home
+          <Dashboard/>
         </Route>
       </Switch>
     </>

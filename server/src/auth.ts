@@ -41,7 +41,7 @@ export function registerAuth(app: Express, context: Context): void {
       if (user && (await bcrypt.compare(password, user.password))) {
         return done(null, user);
       }
-      return done('Invalid username or password');
+      return done(new Error('Invalid username or password'));
     }),
   );
 
