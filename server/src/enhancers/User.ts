@@ -16,7 +16,9 @@ const resolversEnhanceMap: ResolversEnhanceMap = {
     user: [
       Authorized(),
       UseMiddleware(async (data, next) => {
-        data.args.where.id = data.context.req.user.id;
+        if (data.context.req.user.role !== 'ADMIN') {
+          data.args.where.id = data.context.req.user.id;
+        }
         return next();
       }),
     ],
@@ -26,14 +28,18 @@ const resolversEnhanceMap: ResolversEnhanceMap = {
     deleteUser: [
       Authorized(),
       UseMiddleware(async (data, next) => {
-        data.args.where.id = data.context.req.user.id;
+        if (data.context.req.user.role !== 'ADMIN') {
+          data.args.where.id = data.context.req.user.id;
+        }
         return next();
       }),
     ],
     updateUser: [
       Authorized(),
       UseMiddleware(async (data, next) => {
-        data.args.where.id = data.context.req.user.id;
+        if (data.context.req.user.role !== 'ADMIN') {
+          data.args.where.id = data.context.req.user.id;
+        }
         return next();
       }),
     ],
@@ -42,7 +48,9 @@ const resolversEnhanceMap: ResolversEnhanceMap = {
     upsertUser: [
       Authorized(),
       UseMiddleware(async (data, next) => {
-        data.args.where.id = data.context.req.user.id;
+        if (data.context.req.user.role !== 'ADMIN') {
+          data.args.where.id = data.context.req.user.id;
+        }
         return next();
       }),
     ],

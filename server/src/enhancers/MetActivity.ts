@@ -3,7 +3,7 @@ import { Authorized } from 'type-graphql';
 
 const resolversEnhanceMap: ResolversEnhanceMap = {
   MetActivity: {
-    createMetActivity: [Authorized()],
+    createMetActivity: [Authorized(['ADMIN'])],
     deleteMetActivity: [Authorized(['ADMIN'])],
     updateMetActivity: [Authorized(['ADMIN'])],
     deleteManyMetActivity: [Authorized(['ADMIN'])],
