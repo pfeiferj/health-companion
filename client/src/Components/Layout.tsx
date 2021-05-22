@@ -1,5 +1,6 @@
 import AppBar from './AppBar';
 import Login from '../Pages/Login';
+import Signup from '../Pages/Signup';
 import Dashboard from '../Pages/Dashboard';
 import {
   Switch,
@@ -13,6 +14,9 @@ export default function Layout() {
       <Switch>
         <Route path="/login">
           <Login />
+        </Route>
+        <Route path="/signup">
+          <Signup />
         </Route>
         <Route path="/about">
           About

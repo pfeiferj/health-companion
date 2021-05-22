@@ -15,7 +15,12 @@ import './enhancers/register';
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: true,
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 app.use(cookieParser());
 
@@ -29,7 +34,7 @@ app.use(
       maxAge: 60000,
     },
     secret: config.SESSION_SECRET,
-    resave: true,
+    resave: false,
     saveUninitialized: true,
   }),
 );
@@ -52,7 +57,8 @@ const main = async () => {
   registerAuth(app, context);
 
   const server = new ApolloServer({ schema, context });
-  server.applyMiddleware({ app });
+  server.start();
+  server.applyMiddleware({ app, cors: corsOptions });
 
   app.listen({ port: config.PORT }, () => {
     console.log(`🚀 Server ready at http://localhost:${config.PORT + server.graphqlPath}`);

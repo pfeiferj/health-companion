@@ -4,9 +4,9 @@ import Modal from '@material-ui/core/Modal';
 import config from '../config';
 import { gql, useMutation, ApolloError } from '@apollo/client';
 
-const LOGIN = gql`
-  mutation Login($username: String!, $password: String!) {
-    login(username: $username, password: $password) {
+const SIGNUP = gql`
+  mutation Signup($username: String!, $password: String!, $units: String!) {
+    createUser(data:{username: $username, password: $password, units: $units}) {
       id
     }
   }
@@ -38,7 +38,7 @@ interface ModalProps {
   open?: boolean;
 }
 
-export default function LoginModal(props: ModalProps) {
+export default function SignupModal(props: ModalProps) {
   const classes = useStyles();
   const forceOpen = !!props.open;
   // getModalStyle is not a pure function, we roll the style only on the first render
@@ -48,7 +48,7 @@ export default function LoginModal(props: ModalProps) {
   const [password, setPassword] = React.useState("");
   const [error, setError] = React.useState<ApolloError | null>(null);
 
-  const [login, { data: loginData, loading: loginLoading, error: loginError }] = useMutation(LOGIN,{onError: e=>setError(e)});
+  const [signup, { data: signupData, loading: signupLoading, error: signupError }] = useMutation(SIGNUP,{onError: e=>setError(e)});
 
   const handleOpen = () => {
     setOpen(true);
@@ -58,7 +58,7 @@ export default function LoginModal(props: ModalProps) {
     setOpen(false);
   };
 
-  if(loginData) {
+  if(signupData) {
     if(forceOpen){
       window.location.href = "/";
     } else if(open) {
@@ -68,13 +68,13 @@ export default function LoginModal(props: ModalProps) {
 
   const body = (
     <div style={modalStyle} className={classes.paper}>
-      <h2 id="login-modal-title">Login</h2>
+      <h2 id="signup-modal-title">Signup</h2>
 
       <label>Username:</label><br />
       <input type="text" id="fname" name="username" value={username} onChange={(event) => setUsername(event.target.value)} /><br />
       <label>Password:</label><br />
       <input type="text" id="lname" name="password" value={password} onChange={(event) => setPassword(event.target.value)} /><br /><br />
-      <input type="button" value="Submit" onClick={() => {try{setError(null);login({variables: {username,password}})}catch(e){}}} /><br/>
+      <input type="button" value="Submit" onClick={() => {try{setError(null);signup({variables: {username,password,units: "IMPERIAL"}})}catch(e){}}} /><br/>
       {error && error.message}
     </div>
   );

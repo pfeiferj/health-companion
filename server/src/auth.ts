@@ -4,7 +4,7 @@ import type { Express } from 'express';
 import type { User } from '@prisma/client';
 import bcrypt from 'bcrypt';
 import { Strategy as LocalStrategy } from 'passport-local';
-import { Arg, Ctx, Mutation, Resolver, AuthChecker, ObjectType, Field } from 'type-graphql';
+import { Arg, Ctx, Query, Mutation, Resolver, AuthChecker, ObjectType, Field } from 'type-graphql';
 import { GraphQLLocalStrategy } from 'graphql-passport';
 
 passport.serializeUser((user: unknown, done) => {
@@ -77,8 +77,8 @@ class UserClass implements Omit<User, 'password'> {
   username: string;
   @Field()
   units: string;
-  @Field()
-  name: string;
+  @Field((type) => String, { nullable: true })
+  name: string | null;
 }
 
 @Resolver()
@@ -88,7 +88,7 @@ export class AuthResolver {
     @Arg('username') username: string,
     @Arg('password') password: string,
     @Ctx() ctx: ContextReturn,
-  ): Promise<User> {
+  ): Promise<UserClass> {
     const { user } = await ctx.authenticate('graphql-local', {
       username,
       password,
@@ -97,7 +97,16 @@ export class AuthResolver {
       throw new Error('Incorrect username or password');
     }
 
+    const { password: _, ...finalUser } = user;
     ctx.login(user);
-    return user;
+    return finalUser;
+  }
+  @Query(returns => UserClass) //eslint-disable-line
+  async currentUser(@Ctx() ctx: ContextReturn): Promise<UserClass> {
+    if (ctx.req.user) {
+      const { password, ...user } = ctx.req.user;
+      return user;
+    }
+    return { id: -1, username: '', units: '', name: null };
   }
 }
